@@ -103,7 +103,7 @@ export default function HomePage() {
                 alt={heroImage.description}
                 data-ai-hint={heroImage.imageHint}
                 width={1200}
-                height={600}
+                height={800}
                 className="object-cover w-full rounded-lg"
               />
             )}
@@ -454,3 +454,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
