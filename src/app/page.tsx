@@ -39,11 +39,6 @@ export default function HomePage() {
             <Logo className="w-8 h-8" />
             <span className="text-lg font-bold font-headline">Fala & Traça</span>
           </Link>
-          <Link href="/dashboard">
-            <Button>
-              Começar Agora <ChevronRight className="ml-2" />
-            </Button>
-          </Link>
         </div>
       </header>
       <main className="flex-1">
@@ -95,7 +90,7 @@ export default function HomePage() {
         <section className="container py-12">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="space-y-6">
-              <Badge variant="outline" className="border-primary/50 text-primary">👶 Para crianças de 2 a 12 anos</Badge>
+              <Badge variant="secondary" className="border-primary/50 text-primary">👶 Para crianças de 2 a 12 anos</Badge>
               <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 O caminho seguro para a comunicação
               </h2>
