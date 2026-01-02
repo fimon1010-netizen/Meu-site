@@ -30,6 +30,12 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -428,44 +434,94 @@ export default function HomePage() {
         </section>
         
         {/* Author Section */}
-        <section className="py-12 bg-white lg:py-20 dark:bg-card">
-          <div className="container">
-            <div className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex justify-center lg:col-span-1">
-                {authorImage && (
-                  <Image
-                    src={authorImage.imageUrl}
-                    alt={authorImage.description}
-                    data-ai-hint={authorImage.imageHint}
-                    width={300}
-                    height={300}
-                    className="object-cover rounded-full shadow-lg aspect-square"
-                  />
-                )}
-              </div>
-              <div className="space-y-4 lg:col-span-2">
-                <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
-                  Quem fez o MÉTODO ALEMÃO ADAPTADO?
-                </h2>
-                <p className="text-muted-foreground text-xs md:text-sm">
-                  Este material foi montado pelo professor e terapeuta Thalyson Alves, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
-                </p>
-                <p className="text-muted-foreground text-xs md:text-sm">
-                  O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
-                </p>
-                <p className="text-muted-foreground text-xs md:text-sm">
-                  Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
-                </p>
-              </div>
+        <section className="container py-12 lg:py-20">
+          <div className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-3">
+            <div className="flex justify-center lg:col-span-1">
+              {authorImage && (
+                <Image
+                  src={authorImage.imageUrl}
+                  alt={authorImage.description}
+                  data-ai-hint={authorImage.imageHint}
+                  width={300}
+                  height={300}
+                  className="object-cover rounded-full shadow-lg aspect-square"
+                />
+              )}
             </div>
-            <div className="flex flex-col items-center gap-4 pt-12 mt-12 text-center border-t">
-              <ShieldCheck className="w-16 h-16 text-green-600" />
-              <h3 className="text-2xl font-bold font-headline">Garantia de 7 Dias</h3>
-              <p className="max-w-2xl text-muted-foreground text-sm">
-                Você tem 7 dias para experimentar o método. Se não estiver satisfeito, devolvemos seu dinheiro, sem perguntas.
+            <div className="space-y-4 lg:col-span-2">
+              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+                Quem fez o MÉTODO ALEMÃO ADAPTADO?
+              </h2>
+              <p className="text-muted-foreground text-xs md:text-sm">
+                Este material foi montado pelo professor e terapeuta Thalyson Alves, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
+              </p>
+              <p className="text-muted-foreground text-xs md:text-sm">
+                O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
+              </p>
+              <p className="text-muted-foreground text-xs md:text-sm">
+                Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
               </p>
             </div>
           </div>
+        </section>
+        
+        {/* FAQ Section */}
+        <section className="py-12 bg-white lg:py-20 dark:bg-card">
+          <div className="container max-w-4xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+                Perguntas Frequentes
+              </h2>
+              <p className="mt-4 text-sm text-muted-foreground md:text-base">
+                Tire suas dúvidas mais comuns sobre o método.
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="w-full mt-12">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Como recebo o acesso ao material?</AccordionTrigger>
+                <AccordionContent>
+                  Assim que o pagamento for confirmado, você receberá um e-mail com as instruções e o link para acessar todo o material. Se você escolheu o Plano Premium, o acesso à plataforma online será liberado imediatamente.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Para qual idade é recomendado?</AccordionTrigger>
+                <AccordionContent>
+                  O método é projetado para crianças de 2 a 12 anos. Ele é flexível e pode ser adaptado para diferentes estágios de desenvolvimento, desde o estímulo inicial da fala até a consolidação da leitura e escrita.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
+                <AccordionContent>
+                  Sim! O método foi especialmente pensado para elas. A abordagem visual, estruturada e sem excesso de estímulos cria um ambiente de aprendizado seguro e eficaz para crianças com Transtorno do Espectro Autista (TEA) e Transtorno de Déficit de Atenção e Hiperatividade (TDAH).
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Preciso ter algum conhecimento prévio?</AccordionTrigger>
+                <AccordionContent>
+                  Não precisa. O material é autoexplicativo e foi feito tanto para pais, mães e cuidadores quanto para profissionais da educação. O Plano Premium oferece um plano de estudos semanal para guiar você passo a passo.
+                </AccordionContent>
+              </AccordionItem>
+               <AccordionItem value="item-5">
+                <AccordionTrigger>E se eu não gostar do método?</AccordionTrigger>
+                <AccordionContent>
+                  Nós oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, basta nos enviar um e-mail e devolveremos 100% do seu investimento, sem perguntas.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Guarantee Section */}
+        <section className="py-12 lg:py-20">
+            <div className="container">
+                <div className="flex flex-col items-center gap-4 text-center">
+                    <ShieldCheck className="w-16 h-16 text-green-600" />
+                    <h3 className="text-2xl font-bold font-headline">Garantia de 7 Dias</h3>
+                    <p className="max-w-2xl text-sm text-muted-foreground">
+                        Você tem 7 dias para experimentar o método. Se não estiver satisfeito, devolvemos seu dinheiro, sem perguntas.
+                    </p>
+                </div>
+            </div>
         </section>
       </main>
       <footer className="py-6 border-t bg-card">
