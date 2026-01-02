@@ -410,7 +410,7 @@ export default function HomePage() {
                     data-ai-hint={authorImage.imageHint}
                     width={300}
                     height={300}
-                    className="object-cover rounded-lg shadow-lg aspect-square"
+                    className="object-cover rounded-full shadow-lg aspect-square"
                   />
                 )}
               </div>
