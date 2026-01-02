@@ -11,6 +11,7 @@ import {
   PenTool,
   Sparkles,
   Eye,
+  Download,
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
@@ -58,6 +59,14 @@ export default function HomePage() {
             <p className="max-w-2xl mx-auto mt-6 text-lg text-muted-foreground">
               com leveza, estrutura e respeito ao tempo que Deus preparou para ele 💙
             </p>
+          </div>
+          <div className="mt-8">
+            <Button asChild size="lg" className="h-auto px-8 py-4 text-lg">
+              <Link href="#planos">
+                <Download className="mr-2" />
+                Baixar PDF
+              </Link>
+            </Button>
           </div>
           <div className="flex flex-col items-center justify-center gap-4 mx-auto mt-10 max-w-5xl sm:flex-row sm:gap-6">
             <div className="flex items-center gap-2">
@@ -276,7 +285,7 @@ export default function HomePage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="container py-12 text-center lg:py-24">
+        <section id="planos" className="container py-12 text-center lg:py-24">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
               Escolha o plano ideal para você
