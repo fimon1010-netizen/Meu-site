@@ -330,7 +330,7 @@ export default function HomePage() {
             <Card className="relative flex flex-col text-left border-2 border-primary">
               <Badge className="absolute px-3 py-1 text-sm -top-4 left-1/2 -translate-x-1/2">Mais Popular</Badge>
               <CardHeader className="flex-grow">
-                <CardTitle className="font-headline">Plano Premium</CardTitle>
+                <CardTitle className="font-headline">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
                   <span className="text-4xl font-bold">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
@@ -339,10 +339,14 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="flex flex-col flex-grow gap-4">
                 <ul className="space-y-3">
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-primary" /><strong>Tudo do plano Básico, e mais:</strong></li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-primary" /><strong>Tudo do Plano Básico, e mais:</strong></li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso a todas as atividades</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Personalização de conteúdo com IA</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Conteúdo cristão exclusivo</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Atividades adaptadas para crianças autistas</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Plano semanal de estudos</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Personalização de conteúdo</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Relatórios de progresso detalhados</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acompanhamento individual</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Suporte prioritário</li>
                 </ul>
                 <div className="mt-auto">
