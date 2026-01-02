@@ -52,7 +52,6 @@ export default function DashboardLayout({
               className="flex items-center gap-2 font-bold font-headline"
             >
               <Logo className="w-8 h-8" />
-              <span>Fala & Traça</span>
             </Link>
           </SidebarHeader>
           <SidebarContent>

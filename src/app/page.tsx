@@ -37,7 +37,6 @@ export default function HomePage() {
         <div className="flex items-center justify-between h-20 py-6">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="w-8 h-8" />
-            <span className="text-lg font-bold font-headline">Fala & Traça</span>
           </Link>
         </div>
       </header>
@@ -82,7 +81,6 @@ export default function HomePage() {
                 className="object-cover w-full rounded-lg aspect-video"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
           </div>
         </section>
 
@@ -113,7 +111,7 @@ export default function HomePage() {
                 </li>
               </ul>
               <p className="text-xl font-medium">
-                ✨ Aqui o foco é <span className="text-primary">desenvolver a comunicação</span>, não forçar resultados.
+                ✨ Aqui o foco é desenvolver a comunicação, não forçar resultados.
               </p>
               <div className="mt-8">
                 <Button asChild size="lg" className="h-auto px-8 py-4 text-lg">
