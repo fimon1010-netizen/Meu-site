@@ -28,7 +28,7 @@ import { Logo } from '@/components/logo';
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-child-learning');
 const methodImage = PlaceHolderImages.find((img) => img.id === 'method-image');
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="container z-40 bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
@@ -53,10 +53,10 @@ export default function Home() {
               <span className="text-primary">MÉTODO ALEMÃO ADAPTADO</span>
             </h1>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight font-headline sm:text-3xl">
-              que ajuda crianças a <span className="underline">FALAR e ESCREVER</span> com mais clareza,
+              Um caminho seguro para ajudar seu filho a FALAR e ESCREVER
             </h2>
             <p className="max-w-2xl mx-auto mt-6 text-lg text-muted-foreground">
-              de forma leve, estruturada e sem pressão 💙
+              com leveza, estrutura e respeito ao tempo que Deus preparou para ele 💙
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-4 mx-auto mt-10 max-w-5xl sm:flex-row sm:gap-6">
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <BrainCircuit className="w-5 h-5 text-primary" />
-              <span>Respeitando o ritmo neurológico</span>
+              <span>Respeitando o ritmo neurológico da criança</span>
             </div>
           </div>
           <div className="relative mt-12">
@@ -92,7 +92,7 @@ export default function Home() {
         <section className="container py-12">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="space-y-6">
-              <Badge variant="secondary">Para crianças de 2 a 12 anos</Badge>
+              <Badge variant="secondary">👶 Para crianças de 2 a 12 anos</Badge>
               <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 O caminho seguro para a comunicação
               </h2>
@@ -119,14 +119,14 @@ export default function Home() {
               </p>
             </div>
             <div className="p-4 border rounded-lg bg-card sm:p-8">
-              <h3 className="mb-4 text-2xl font-bold text-center font-headline">Recursos Principais</h3>
+              <h3 className="mb-4 text-2xl font-bold text-center font-headline">📘 Recursos Principais</h3>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="flex flex-row items-center gap-4">
                     <Mic className="w-8 h-8 text-accent shrink-0" />
                     <div>
-                      <CardTitle className="text-lg">Associação de Sons</CardTitle>
-                      <CardDescription>Atividades interativas de som, imagem e movimento.</CardDescription>
+                      <CardTitle className="text-lg">Estímulo da Fala por Sons</CardTitle>
+                      <CardDescription>Atividades que associam som, imagem e movimento.</CardDescription>
                     </div>
                   </CardHeader>
                 </Card>
@@ -134,8 +134,8 @@ export default function Home() {
                   <CardHeader className="flex flex-row items-center gap-4">
                     <PenTool className="w-8 h-8 text-accent shrink-0" />
                     <div>
-                      <CardTitle className="text-lg">Traçado Guiado</CardTitle>
-                      <CardDescription>Exercícios progressivos para desenvolver a escrita.</CardDescription>
+                      <CardTitle className="text-lg">Grafismo Fonético Guiado</CardTitle>
+                      <CardDescription>Exercícios de traçados que preparam para a escrita.</CardDescription>
                     </div>
                   </CardHeader>
                 </Card>
@@ -144,7 +144,7 @@ export default function Home() {
                     <Eye className="w-8 h-8 text-accent shrink-0" />
                     <div>
                       <CardTitle className="text-lg">Aprendizagem Visual</CardTitle>
-                      <CardDescription>Reforce as conexões entre fala, som e formas escritas.</CardDescription>
+                      <CardDescription>Sequência clara e previsível, ideal para TEA.</CardDescription>
                     </div>
                   </CardHeader>
                 </Card>
@@ -152,8 +152,8 @@ export default function Home() {
                   <CardHeader className="flex flex-row items-center gap-4">
                     <Sparkles className="w-8 h-8 text-accent shrink-0" />
                     <div>
-                      <CardTitle className="text-lg">Personalização com IA</CardTitle>
-                      <CardDescription>Conteúdo adaptado às necessidades do seu filho.</CardDescription>
+                      <CardTitle className="text-lg">Personalização Inteligente</CardTitle>
+                      <CardDescription>Conteúdo adaptável à evolução de cada criança.</CardDescription>
                     </div>
                   </CardHeader>
                 </Card>
@@ -172,13 +172,13 @@ export default function Home() {
                   🧠 O que é o Método Alemão Adaptado?
                 </h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                  Inspirado em abordagens alemãs de desenvolvimento da linguagem, o método foca primeiro em:
+                  Inspirado em abordagens alemãs de desenvolvimento da linguagem, o método trabalha primeiro:
                 </p>
                 <ul className="grid grid-cols-2 gap-4 mt-4 text-lg">
                   <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Sons</li>
                   <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Movimentos</li>
                   <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Traçados</li>
-                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Associação</li>
+                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Associação visual</li>
                   <li className="flex items-center col-span-2 gap-3"><Sparkles className="w-5 h-5 text-accent"/>Coordenação motora</li>
                 </ul>
                 <p className="pt-4 text-lg text-muted-foreground">
@@ -217,7 +217,7 @@ export default function Home() {
               <CardContent className="space-y-2 text-muted-foreground">
                 <p>Pula etapas do desenvolvimento</p>
                 <p>Exige leitura antes da hora</p>
-                <p>Ambientes confusos (ruim para TEA)</p>
+                <p>Ambientes confusos e estimulantes demais</p>
               </CardContent>
             </Card>
             <Card className="p-2 border-green-200 sm:p-6">
@@ -227,13 +227,13 @@ export default function Home() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 text-muted-foreground">
-                <p>Estrutura e Previsibilidade</p>
-                <p>Repetição calma e Estímulo visual</p>
-                <p>Segurança para avançar sem pressão</p>
+                <p>Estrutura e previsibilidade</p>
+                <p>Repetição calma e estímulo visual</p>
+                <p>Segurança emocional para avançar sem pressão</p>
               </CardContent>
             </Card>
           </div>
-          <p className="mt-8 text-lg text-center text-muted-foreground">E é exatamente isso que a nossa plataforma oferece.</p>
+          <p className="mt-8 text-lg text-center text-muted-foreground">Acreditamos que cada criança aprende melhor quando se sente segura.</p>
         </section>
 
         {/* Testimonials Section */}
@@ -250,27 +250,27 @@ export default function Home() {
               </div>
               <div className="p-6">
                  <Heart className="w-10 h-10 mx-auto text-primary" />
-                <h3 className="mt-4 text-lg font-semibold font-headline">Sons mais claros</h3>
+                <h3 className="mt-4 text-lg font-semibold font-headline">Sons mais claros e organizados</h3>
                 <p className="mt-2 text-muted-foreground">A associação fonética melhora a articulação.</p>
               </div>
               <div className="p-6">
                  <Heart className="w-10 h-10 mx-auto text-primary" />
-                <h3 className="mt-4 text-lg font-semibold font-headline">Interesse por letras</h3>
-                <p className="mt-2 text-muted-foreground">A curiosidade natural pela escrita é despertada.</p>
+                <h3 className="mt-4 text-lg font-semibold font-headline">Interesse natural por letras e escrita</h3>
+                <p className="mt-2 text-muted-foreground">A curiosidade pela escrita é despertada sem pressão.</p>
               </div>
               <div className="p-6">
                  <Heart className="w-10 h-10 mx-auto text-primary" />
-                <h3 className="mt-4 text-lg font-semibold font-headline">Melhora na coordenação</h3>
+                <h3 className="mt-4 text-lg font-semibold font-headline">Melhora na coordenação motora</h3>
                 <p className="mt-2 text-muted-foreground">O controle do traçado se reflete em outras atividades.</p>
               </div>
-              <div className="p-6 sm:col-span-2 lg:col-span-1">
+               <div className="p-6 sm:col-span-2 lg:col-span-1">
                  <Heart className="w-10 h-10 mx-auto text-primary" />
-                <h3 className="mt-4 text-lg font-semibold font-headline">Menos frustração</h3>
+                <h3 className="mt-4 text-lg font-semibold font-headline">Menos frustração e ansiedade</h3>
                 <p className="mt-2 text-muted-foreground">Atividades adaptadas reduzem crises e ansiedade.</p>
               </div>
             </div>
              <p className="mt-8 text-xl font-medium text-center">
-              💙 A comunicação flui quando a criança se sente segura.
+              💙 A comunicação floresce quando a criança é acolhida.
             </p>
           </div>
         </section>
@@ -344,8 +344,8 @@ export default function Home() {
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Badge variant="default" className="text-base">Crianças com TEA</Badge>
-              <Badge variant="default" className="text-base">Atraso na fala</Badge>
-              <Badge variant="default" className="text-base">Pais que querem ajudar</Badge>
+              <Badge variant="default" className="text-base">Atraso na fala ou escrita</Badge>
+              <Badge variant="default" className="text-base">Pais que desejam ajudar</Badge>
               <Badge variant="default" className="text-base">Educadores e Terapeutas</Badge>
             </div>
             <div className='mt-12'>
