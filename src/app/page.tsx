@@ -31,6 +31,8 @@ import { Logo } from '@/components/logo';
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-child-learning');
 const methodImage = PlaceHolderImages.find((img) => img.id === 'method-image');
+const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
+
 
 export default function HomePage() {
   const [currentDate, setCurrentDate] = useState('');
@@ -375,6 +377,41 @@ export default function HomePage() {
            </div>
         </section>
 
+        {/* Author Section */}
+        <section className="py-12 bg-white lg:py-20 dark:bg-card">
+          <div className="container">
+            <div className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-3">
+              <div className="lg:col-span-1">
+                {authorImage && (
+                  <Image
+                    src={authorImage.imageUrl}
+                    alt={authorImage.description}
+                    data-ai-hint={authorImage.imageHint}
+                    width={400}
+                    height={400}
+                    className="object-cover w-full rounded-lg shadow-lg aspect-square"
+                  />
+                )}
+              </div>
+              <div className="space-y-4 lg:col-span-2">
+                <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
+                  Quem fez o MÉTODO ALEMÃO ADAPTADO?
+                </h2>
+                <p className="text-muted-foreground">
+                  Este material foi montado pelo professor e terapeuta Thalyson Alves, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
+                </p>
+                <p className="text-muted-foreground">
+                  O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
+                </p>
+                <p className="text-muted-foreground">
+                  Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
       </main>
       <footer className="py-6 border-t bg-card">
         <div className="container flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
@@ -389,6 +426,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
-    
