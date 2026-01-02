@@ -159,14 +159,6 @@ export default function HomePage() {
               <p className="text-base font-medium md:text-lg">
                 ✨ Aqui o foco é desenvolver a comunicação, não forçar resultados.
               </p>
-              <div className="flex justify-center mt-8">
-                <Button asChild size="lg" className="h-auto px-8 py-4 text-base">
-                  <Link href="#planos">
-                    <Download className="mr-2" />
-                    Baixar PDF
-                  </Link>
-                </Button>
-              </div>
             </div>
             <div className="p-4 border rounded-lg bg-card sm:p-6">
               <h3 className="mb-4 text-lg font-bold text-center font-headline md:text-xl">📘 Recursos Principais</h3>
@@ -212,6 +204,15 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* CTA Button Section */}
+        <section className="container pb-12 text-center">
+            <Button asChild size="lg" className="h-auto px-8 py-4 text-base">
+              <Link href="#planos">
+                <Download className="mr-2" />
+                Baixar PDF
+              </Link>
+            </Button>
+        </section>
 
         {/* What is the method Section */}
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
