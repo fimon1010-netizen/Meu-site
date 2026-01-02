@@ -90,3 +90,12 @@
     color: hsl(var(--primary));
   }
 }
+
+@layer utilities {
+  .bg-blue-50\/50 {
+    background-color: rgba(239, 246, 255, 0.5);
+  }
+  .dark .dark\:bg-blue-900\/10 {
+    background-color: rgba(30, 58, 138, 0.1);
+  }
+}

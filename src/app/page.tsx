@@ -90,14 +90,14 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="container py-12 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-extrabold tracking-tighter font-headline sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tighter font-headline sm:text-5xl md:text-6xl lg:text-7xl">
               <span className="text-primary">🌟</span> Descubra o{' '}
               <span className="text-primary">MÉTODO ALEMÃO ADAPTADO</span>
             </h1>
-            <h2 className="mt-4 text-xl font-semibold tracking-tight font-headline sm:text-2xl md:text-3xl">
+            <h2 className="mt-4 text-lg font-semibold tracking-tight font-headline sm:text-xl md:text-2xl">
               Um caminho seguro para ajudar seu filho a FALAR e ESCREVER
             </h2>
-            <p className="max-w-2xl mx-auto mt-4 text-sm text-muted-foreground md:text-base lg:text-lg">
+            <p className="max-w-2xl mx-auto mt-4 text-sm text-muted-foreground md:text-base">
               com leveza, estrutura e respeito ao tempo que Deus preparou para ele 💙
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="space-y-6">
               <Badge variant="secondary" className="border-primary/50 text-primary">👶 Para crianças de 2 a 12 anos</Badge>
-              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+              <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 O caminho seguro para a comunicação
               </h2>
               <ul className="space-y-4 text-sm text-muted-foreground md:text-base">
@@ -161,7 +161,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="p-4 border rounded-lg bg-card sm:p-6">
-              <h3 className="mb-4 text-lg font-bold text-center font-headline md:text-xl">📘 Recursos Principais</h3>
+              <h3 className="mb-4 text-xl font-bold text-center font-headline md:text-2xl">📘 Recursos Principais</h3>
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="flex flex-row items-center gap-4 p-3 sm:p-4">
@@ -219,7 +219,7 @@ export default function HomePage() {
           <div className="container">
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div className="order-last md:order-first">
-                <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+                <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                   🧠 O que é o Método Alemão Adaptado?
                 </h2>
                 <p className="mt-4 text-sm text-muted-foreground md:text-base">
@@ -255,17 +255,17 @@ export default function HomePage() {
         {/* Why kids struggle Section */}
         <section className="container py-12 lg:py-20">
            <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">💡 Por que muitas crianças travam?</h2>
+            <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">💡 Por que muitas crianças travam?</h2>
             <p className="mt-4 text-sm text-muted-foreground md:text-base">Não é falta de capacidade. É a abordagem.</p>
           </div>
           <div className="grid max-w-4xl gap-8 mx-auto mt-12 md:grid-cols-2">
             <Card className="p-2 border-red-200 sm:p-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-red-500 text-base md:text-lg">
+                <CardTitle className="flex items-center gap-2 text-red-500 text-lg md:text-xl">
                   ❌ Abordagem comum
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-muted-foreground text-xs md:text-sm">
+              <CardContent className="space-y-2 text-muted-foreground text-sm md:text-base">
                 <p>Pula etapas do desenvolvimento</p>
                 <p>Exige leitura antes da hora</p>
                 <p>Ambientes confusos e estimulantes demais</p>
@@ -273,11 +273,11 @@ export default function HomePage() {
             </Card>
             <Card className="p-2 border-green-200 sm:p-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-green-600 text-base md:text-lg">
+                <CardTitle className="flex items-center gap-2 text-green-600 text-lg md:text-xl">
                   💙 Nossa abordagem
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-muted-foreground text-xs md:text-sm">
+              <CardContent className="space-y-2 text-muted-foreground text-sm md:text-base">
                 <p>Estrutura e previsibilidade</p>
                 <p>Repetição calma e estímulo visual</p>
                 <p>Segurança emocional para avançar sem pressão</p>
@@ -290,7 +290,7 @@ export default function HomePage() {
         {/* Pricing Section */}
         <section id="planos" className="container py-12 text-center lg:py-24">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+            <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
               Escolha o plano ideal para você
             </h2>
             <p className="mt-4 text-sm text-muted-foreground md:text-base">
@@ -300,14 +300,14 @@ export default function HomePage() {
           <div className="grid max-w-5xl gap-8 mx-auto mt-12 md:grid-cols-2">
             <Card className="flex flex-col text-left">
               <CardHeader className="flex-grow">
-                <CardTitle className="font-headline text-lg md:text-xl">📘 Plano Básico</CardTitle>
+                <CardTitle className="font-headline text-xl md:text-2xl">📘 Plano Básico</CardTitle>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold md:text-3xl">R$10</span>
+                  <span className="text-3xl font-bold md:text-4xl">R$10</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <CardDescription>O essencial para iniciar a alfabetização.</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col flex-grow gap-4 text-xs md:text-sm">
+              <CardContent className="flex flex-col flex-grow gap-4 text-sm md:text-base">
                 <ul className="space-y-3">
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso ao PDF principal</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Reconhecimento de letras e sílabas</li>
@@ -346,17 +346,17 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="relative flex flex-col text-left border-2 border-primary">
+            <Card className="relative flex flex-col text-left border-2 border-primary bg-blue-50/50 dark:bg-blue-900/10 shadow-lg">
               <Badge className="absolute px-3 py-1 text-xs -top-4 left-1/2 -translate-x-1/2">Mais Popular</Badge>
               <CardHeader className="flex-grow">
-                <CardTitle className="font-headline text-lg md:text-xl">🌟 Plano Premium</CardTitle>
+                <CardTitle className="font-headline text-xl md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold md:text-3xl">R$27,99</span>
+                  <span className="text-3xl font-bold md:text-4xl">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <CardDescription>Acesso completo e personalizado para acelerar os resultados.</CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col flex-grow gap-4 text-xs md:text-sm">
+              <CardContent className="flex flex-col flex-grow gap-4 text-sm md:text-base">
                 <ul className="space-y-3">
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-primary" /><strong>Tudo do Plano Básico, e mais:</strong></li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso a todas as atividades</li>
@@ -369,7 +369,7 @@ export default function HomePage() {
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Suporte prioritário</li>
                 </ul>
                 <div className="mt-auto">
-                   <Button className="w-full" asChild>
+                   <Button className="w-full animate-pulse" asChild>
                     <Link href='/dashboard'>
                       Escolher Premium <Sparkles className="ml-2" />
                     </Link>
@@ -384,7 +384,7 @@ export default function HomePage() {
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+              <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 🌟 O Que Nossos Clientes Dizem
               </h2>
             </div>
@@ -450,16 +450,16 @@ export default function HomePage() {
               )}
             </div>
             <div className="space-y-4 lg:col-span-2">
-              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+              <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 Quem fez o MÉTODO ALEMÃO ADAPTADO?
               </h2>
-              <p className="text-muted-foreground text-xs md:text-sm">
+              <p className="text-muted-foreground text-sm md:text-base">
                 Este material foi montado pelo professor e terapeuta Thalyson Alves, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
               </p>
-              <p className="text-muted-foreground text-xs md:text-sm">
+              <p className="text-muted-foreground text-sm md:text-base">
                 O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
               </p>
-              <p className="text-muted-foreground text-xs md:text-sm">
+              <p className="text-muted-foreground text-sm md:text-base">
                 Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
               </p>
             </div>
@@ -470,7 +470,7 @@ export default function HomePage() {
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
           <div className="container max-w-4xl mx-auto">
             <div className="text-center">
-              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+              <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 Perguntas Frequentes
               </h2>
               <p className="mt-4 text-sm text-muted-foreground md:text-base">
