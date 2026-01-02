@@ -78,7 +78,7 @@ export default function HomePage() {
                 data-ai-hint={heroImage.imageHint}
                 width={1200}
                 height={600}
-                className="object-cover w-full rounded-lg aspect-video"
+                className="object-cover w-full rounded-lg"
               />
             )}
           </div>
@@ -369,7 +369,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <Logo className="w-6 h-6" />
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Fala & Traça. Todos os direitos reservados.
+              &copy; {new Date().getFullYear()} Todos os direitos reservados.
             </p>
           </div>
           <div className="text-sm text-muted-foreground">
