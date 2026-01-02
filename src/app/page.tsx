@@ -46,6 +46,13 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Discount Banner */}
+      <div className="py-2 text-center bg-accent text-accent-foreground">
+        <p className="font-semibold">
+          🔥 DESCONTO SÓ HOJE – {currentDate} 🔥
+        </p>
+      </div>
+
       <header className="container z-40 bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
         <div className="flex items-center justify-between h-20 py-6">
           <Link href="/" className="flex items-center gap-2">
@@ -54,13 +61,6 @@ export default function HomePage() {
         </div>
       </header>
       <main className="flex-1">
-        {/* Discount Banner */}
-        <div className="py-2 text-center bg-accent text-accent-foreground">
-          <p className="font-semibold">
-            🔥 DESCONTO SÓ HOJE – {currentDate} 🔥
-          </p>
-        </div>
-        
         {/* Hero Section */}
         <section className="container py-12 text-center">
           <div className="max-w-4xl mx-auto">
@@ -398,4 +398,5 @@ export default function HomePage() {
   );
 }
 
+    
     
