@@ -274,6 +274,67 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        {/* Pricing Section */}
+        <section className="container py-12 text-center lg:py-24">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
+              Escolha o plano ideal para você
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Comece com o essencial no Básico ou desbloqueie todo o potencial com o Premium.
+            </p>
+          </div>
+          <div className="grid max-w-5xl gap-8 mx-auto mt-12 md:grid-cols-2">
+            <Card className="flex flex-col text-left">
+              <CardHeader className="flex-grow">
+                <CardTitle className="font-headline">Plano Básico</CardTitle>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-bold">R$10</span>
+                  <span className="text-muted-foreground">/mês</span>
+                </div>
+                <CardDescription>O essencial para iniciar o desenvolvimento.</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col flex-grow gap-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Acesso a atividades de som</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Exercícios de traçado (iniciante)</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Acompanhamento de progresso</li>
+                </ul>
+                <div className="mt-auto">
+                  <Button variant="secondary" className="w-full">
+                    Começar com o Básico
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="relative flex flex-col text-left border-2 border-primary">
+              <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">Mais Popular</Badge>
+              <CardHeader className="flex-grow">
+                <CardTitle className="font-headline">Plano Premium</CardTitle>
+                 <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-bold">R$27,99</span>
+                  <span className="text-muted-foreground">/mês</span>
+                </div>
+                <CardDescription>Acesso completo e personalizado para acelerar os resultados.</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col flex-grow gap-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-primary" /><strong>Tudo do plano Básico, e mais:</strong></li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Acesso a todas as atividades</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Personalização de conteúdo com IA</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Relatórios de progresso detalhados</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Suporte prioritário</li>
+                </ul>
+                <div className="mt-auto">
+                   <Button className="w-full">
+                    Escolher Premium <Sparkles className="ml-2" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
         
         {/* For Whom Section */}
         <section className="container py-12 text-center lg:py-24">
@@ -315,5 +376,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
