@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -60,14 +61,7 @@ export default function HomePage() {
               com leveza, estrutura e respeito ao tempo que Deus preparou para ele 💙
             </p>
           </div>
-          <div className="mt-8">
-            <Button asChild size="lg" className="h-auto px-8 py-4 text-lg">
-              <Link href="#planos">
-                <Download className="mr-2" />
-                Baixar PDF
-              </Link>
-            </Button>
-          </div>
+          
           <div className="flex flex-col items-center justify-center gap-4 mx-auto mt-10 max-w-5xl sm:flex-row sm:gap-6">
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-primary" />
@@ -126,6 +120,14 @@ export default function HomePage() {
               <p className="text-xl font-medium">
                 ✨ Aqui o foco é <span className="text-primary">desenvolver a comunicação</span>, não forçar resultados.
               </p>
+              <div className="mt-8">
+                <Button asChild size="lg" className="h-auto px-8 py-4 text-lg">
+                  <Link href="#planos">
+                    <Download className="mr-2" />
+                    Baixar PDF
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div className="p-4 border rounded-lg bg-card sm:p-8">
               <h3 className="mb-4 text-2xl font-bold text-center font-headline">📘 Recursos Principais</h3>
