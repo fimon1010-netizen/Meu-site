@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-child-learning",
+      "description": "A child happily engaged in a learning activity at home.",
+      "imageUrl": "https://images.unsplash.com/photo-1560785496-3c9d27877182?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGlsZCUyMGxlYXJuaW5nfGVufDB8fHx8MTc2NzMzNjg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child learning"
+    },
+    {
+      "id": "feature-sound",
+      "description": "A child listening with headphones, focusing on sound.",
+      "imageUrl": "https://images.unsplash.com/photo-1571650452577-755817f40c0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGlsZCUyMHNwZWFraW5nfGVufDB8fHx8MTc2NzMzNjg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child speaking"
+    },
+    {
+      "id": "feature-tracing",
+      "description": "A close-up of a child's hand holding a pencil and tracing lines.",
+      "imageUrl": "https://images.unsplash.com/photo-1646617747593-8f075659286a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGlsZCUyMHdyaXRpbmd8ZW58MHx8fHwxNzY3MjczNDk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child writing"
+    },
+    {
+      "id": "feature-visual",
+      "description": "A child arranging colorful blocks or puzzle pieces.",
+      "imageUrl": "https://images.unsplash.com/photo-1759678444870-1f09f0d9e688?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaGlsZCUyMHB1enpsZXxlbnwwfHx8fDE3NjczMzY4ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "child puzzle"
+    },
+    {
+      "id": "method-image",
+      "description": "An abstract representation of brain synapses and connections.",
+      "imageUrl": "https://images.unsplash.com/photo-1720722818189-edcb9da6664d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxicmFpbiUyMGNvbm5lY3Rpb25zfGVufDB8fHx8MTc2NzMzNjg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brain connections"
+    },
+    {
+      "id": "user-avatar",
+      "description": "A placeholder avatar for a user.",
+      "imageUrl": "https://images.unsplash.com/photo-1750535135645-005e250ff210?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzY3MjY3Nzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person avatar"
+    }
+  ]
 }
