@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -53,13 +52,6 @@ export default function HomePage() {
         </p>
       </div>
 
-      <header className="container z-40 bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
-        <div className="flex items-center justify-between h-20 py-6">
-          <Link href="/" className="flex items-center gap-2">
-            <Logo className="w-8 h-8" />
-          </Link>
-        </div>
-      </header>
       <main className="flex-1">
         {/* Hero Section */}
         <section className="container py-12 text-center">
