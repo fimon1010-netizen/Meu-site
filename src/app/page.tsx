@@ -16,7 +16,9 @@ import {
   Download,
   ShieldCheck,
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Autoplay from "embla-carousel-autoplay"
+
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -57,6 +59,9 @@ const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
 
 export default function HomePage() {
   const [currentDate, setCurrentDate] = useState('');
+   const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  )
 
   useEffect(() => {
     const date = new Date();
@@ -367,6 +372,60 @@ export default function HomePage() {
             </Card>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <section className="py-12 bg-white lg:py-20 dark:bg-card">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+                🌟 O Que Nossos Clientes Dizem
+              </h2>
+            </div>
+            <Carousel
+              plugins={[plugin.current]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-4xl mx-auto mt-12"
+               onMouseEnter={plugin.current.stop}
+               onMouseLeave={plugin.current.reset}
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => {
+                  const avatar = PlaceHolderImages.find(p => p.id === `testimonial-avatar-${index + 1}`);
+                  return (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <Card className="flex flex-col h-full">
+                          <CardContent className="flex-grow p-6">
+                            <p className="text-muted-foreground">
+                              “{testimonial.text}”
+                            </p>
+                          </CardContent>
+                          <CardHeader className="flex flex-row items-center gap-4 pt-0">
+                            {avatar && (
+                              <Avatar>
+                                <AvatarImage src={avatar.imageUrl} alt={testimonial.author} />
+                                <AvatarFallback>{testimonial.author.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                              </Avatar>
+                            )}
+                            <div>
+                              <CardTitle className="text-base">{testimonial.author}</CardTitle>
+                              <CardDescription className="text-xs sm:text-sm">{testimonial.location} • {testimonial.role}</CardDescription>
+                            </div>
+                          </CardHeader>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  )
+                })}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </section>
         
         {/* Author Section */}
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
@@ -408,59 +467,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* Testimonials Section */}
-        <section className="py-12 bg-white lg:py-20 dark:bg-card">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
-                🌟 O Que Nossos Clientes Dizem
-              </h2>
-            </div>
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full max-w-4xl mx-auto mt-12"
-            >
-              <CarouselContent>
-                {testimonials.map((testimonial, index) => {
-                  const avatar = PlaceHolderImages.find(p => p.id === `testimonial-avatar-${index + 1}`);
-                  return (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-1">
-                        <Card className="flex flex-col h-full">
-                          <CardContent className="flex-grow p-6">
-                            <p className="text-muted-foreground">
-                              “{testimonial.text}”
-                            </p>
-                          </CardContent>
-                          <CardHeader className="flex flex-row items-center gap-4 pt-0">
-                            {avatar && (
-                              <Avatar>
-                                <AvatarImage src={avatar.imageUrl} alt={testimonial.author} />
-                                <AvatarFallback>{testimonial.author.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                              </Avatar>
-                            )}
-                            <div>
-                              <CardTitle className="text-base">{testimonial.author}</CardTitle>
-                              <CardDescription className="text-xs sm:text-sm">{testimonial.location} • {testimonial.role}</CardDescription>
-                            </div>
-                          </CardHeader>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  )
-                })}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </section>
-
-
       </main>
       <footer className="py-6 border-t bg-card">
         <div className="container flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
@@ -475,3 +481,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
