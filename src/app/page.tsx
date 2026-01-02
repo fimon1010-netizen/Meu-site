@@ -122,8 +122,8 @@ export default function HomePage() {
               <h3 className="mb-4 text-2xl font-bold text-center font-headline">📘 Recursos Principais</h3>
               <div className="space-y-4">
                 <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <Mic className="w-8 h-8 text-accent shrink-0" />
+                  <CardHeader className="flex flex-row items-center gap-4 p-4">
+                    <Mic className="w-8 h-8 text-primary shrink-0" />
                     <div>
                       <CardTitle className="text-lg">Estímulo da Fala por Sons</CardTitle>
                       <CardDescription>Atividades que associam som, imagem e movimento.</CardDescription>
@@ -131,8 +131,8 @@ export default function HomePage() {
                   </CardHeader>
                 </Card>
                 <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <PenTool className="w-8 h-8 text-accent shrink-0" />
+                  <CardHeader className="flex flex-row items-center gap-4 p-4">
+                    <PenTool className="w-8 h-8 text-primary shrink-0" />
                     <div>
                       <CardTitle className="text-lg">Grafismo Fonético Guiado</CardTitle>
                       <CardDescription>Exercícios de traçados que preparam para a escrita.</CardDescription>
@@ -140,8 +140,8 @@ export default function HomePage() {
                   </CardHeader>
                 </Card>
                 <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <Eye className="w-8 h-8 text-accent shrink-0" />
+                  <CardHeader className="flex flex-row items-center gap-4 p-4">
+                    <Eye className="w-8 h-8 text-primary shrink-0" />
                     <div>
                       <CardTitle className="text-lg">Aprendizagem Visual</CardTitle>
                       <CardDescription>Sequência clara e previsível, ideal para TEA.</CardDescription>
@@ -149,8 +149,8 @@ export default function HomePage() {
                   </CardHeader>
                 </Card>
                 <Card>
-                  <CardHeader className="flex flex-row items-center gap-4">
-                    <Sparkles className="w-8 h-8 text-accent shrink-0" />
+                  <CardHeader className="flex flex-row items-center gap-4 p-4">
+                    <Sparkles className="w-8 h-8 text-primary shrink-0" />
                     <div>
                       <CardTitle className="text-lg">Personalização Inteligente</CardTitle>
                       <CardDescription>Conteúdo adaptável à evolução de cada criança.</CardDescription>
@@ -175,11 +175,11 @@ export default function HomePage() {
                   Inspirado em abordagens alemãs de desenvolvimento da linguagem, o método trabalha primeiro:
                 </p>
                 <ul className="grid grid-cols-2 gap-4 mt-4 text-lg">
-                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Sons</li>
-                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Movimentos</li>
-                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Traçados</li>
-                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-accent"/>Associação visual</li>
-                  <li className="flex items-center col-span-2 gap-3"><Sparkles className="w-5 h-5 text-accent"/>Coordenação motora</li>
+                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-primary"/>Sons</li>
+                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-primary"/>Movimentos</li>
+                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-primary"/>Traçados</li>
+                  <li className="flex items-center gap-3"><Sparkles className="w-5 h-5 text-primary"/>Associação visual</li>
+                  <li className="flex items-center col-span-2 gap-3"><Sparkles className="w-5 h-5 text-primary"/>Coordenação motora</li>
                 </ul>
                 <p className="pt-4 text-lg text-muted-foreground">
                   👉 Para <span className="font-semibold text-foreground">preparar o cérebro</span> da criança para <span className="font-semibold text-foreground">FALAR e ESCREVER</span>, antes de qualquer exigência de leitura.
@@ -309,7 +309,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card className="relative flex flex-col text-left border-2 border-primary">
-              <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">Mais Popular</Badge>
+              <Badge className="absolute px-3 py-1 text-sm -top-4 left-1/2 -translate-x-1/2">Mais Popular</Badge>
               <CardHeader className="flex-grow">
                 <CardTitle className="font-headline">Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
@@ -343,10 +343,10 @@ export default function HomePage() {
               👨‍👩‍👧 Para quem é esta plataforma?
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Badge variant="default" className="text-base">Crianças com TEA</Badge>
-              <Badge variant="default" className="text-base">Atraso na fala ou escrita</Badge>
-              <Badge variant="default" className="text-base">Pais que desejam ajudar</Badge>
-              <Badge variant="default" className="text-base">Educadores e Terapeutas</Badge>
+              <Badge variant="secondary" className="text-base">Crianças com TEA</Badge>
+              <Badge variant="secondary" className="text-base">Atraso na fala ou escrita</Badge>
+              <Badge variant="secondary" className="text-base">Pais que desejam ajudar</Badge>
+              <Badge variant="secondary" className="text-base">Educadores e Terapeutas</Badge>
             </div>
             <div className='mt-12'>
               <Link href="/dashboard">
