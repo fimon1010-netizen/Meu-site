@@ -360,29 +360,6 @@ export default function HomePage() {
           </div>
         </section>
         
-        {/* For Whom Section */}
-        <section className="container py-12 text-center lg:py-24">
-           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
-              👨‍👩‍👧 Para quem é esta plataforma?
-            </h2>
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Badge variant="outline" className="text-base border-primary/50 text-primary">Crianças com TEA</Badge>
-              <Badge variant="outline" className="text-base border-primary/50 text-primary">Atraso na fala ou escrita</Badge>
-              <Badge variant="outline" className="text-base border-primary/50 text-primary">Pais que desejam ajudar</Badge>
-              <Badge variant="outline" className="text-base border-primary/50 text-primary">Educadores e Terapeutas</Badge>
-            </div>
-            <div className='mt-12'>
-              <Link href="/dashboard">
-                <Button size="lg" className="h-auto px-6 py-4 text-lg">
-                  Baixar PDF
-                  <ChevronRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
-           </div>
-        </section>
-
         {/* Author Section */}
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
           <div className="container">
