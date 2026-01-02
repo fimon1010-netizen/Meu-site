@@ -14,6 +14,7 @@ import {
   Sparkles,
   Eye,
   Download,
+  ShieldCheck,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -407,6 +408,13 @@ export default function HomePage() {
                   Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
                 </p>
               </div>
+            </div>
+            <div className="flex flex-col items-center gap-4 pt-12 mt-12 text-center border-t">
+              <ShieldCheck className="w-16 h-16 text-green-600" />
+              <h3 className="text-2xl font-bold font-headline">Garantia de 7 Dias</h3>
+              <p className="max-w-2xl text-muted-foreground">
+                Você tem 7 dias para experimentar o método. Se não estiver satisfeito, devolvemos seu dinheiro, sem perguntas.
+              </p>
             </div>
           </div>
         </section>
