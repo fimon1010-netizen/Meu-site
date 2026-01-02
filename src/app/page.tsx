@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -14,6 +16,7 @@ import {
   Eye,
   Download,
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -31,6 +34,16 @@ const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-child-learnin
 const methodImage = PlaceHolderImages.find((img) => img.id === 'method-image');
 
 export default function HomePage() {
+  const [currentDate, setCurrentDate] = useState('');
+
+  useEffect(() => {
+    const date = new Date();
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    setCurrentDate(`${day}/${month}/${year}`);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="container z-40 bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
@@ -41,6 +54,13 @@ export default function HomePage() {
         </div>
       </header>
       <main className="flex-1">
+        {/* Discount Banner */}
+        <div className="py-2 text-center bg-accent text-accent-foreground">
+          <p className="font-semibold">
+            🔥 DESCONTO SÓ HOJE – {currentDate} 🔥
+          </p>
+        </div>
+        
         {/* Hero Section */}
         <section className="container py-12 text-center">
           <div className="max-w-4xl mx-auto">
@@ -380,3 +400,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
