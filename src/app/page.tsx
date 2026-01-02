@@ -307,18 +307,19 @@ export default function HomePage() {
           <div className="grid max-w-5xl gap-8 mx-auto mt-12 md:grid-cols-2">
             <Card className="flex flex-col text-left">
               <CardHeader className="flex-grow">
-                <CardTitle className="font-headline">Plano Básico</CardTitle>
+                <CardTitle className="font-headline">📘 Plano Básico</CardTitle>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl font-bold">R$10</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
-                <CardDescription>O essencial para iniciar o desenvolvimento.</CardDescription>
+                <CardDescription>O essencial para iniciar a alfabetização.</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col flex-grow gap-4">
                 <ul className="space-y-3">
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso a atividades de som</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Exercícios de traçado (iniciante)</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acompanhamento de progresso</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso ao PDF principal</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Reconhecimento de letras e sílabas</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Conteúdo cristão simples</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Rotina diária orientada</li>
                 </ul>
                 <div className="mt-auto">
                   <Button variant="secondary" className="w-full">
