@@ -79,7 +79,7 @@ export default function HomePage() {
                 data-ai-hint={heroImage.imageHint}
                 width={1200}
                 height={600}
-                className="object-cover w-full rounded-lg shadow-2xl aspect-video"
+                className="object-cover w-full rounded-lg aspect-video"
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
