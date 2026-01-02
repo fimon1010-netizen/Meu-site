@@ -478,31 +478,31 @@ export default function HomePage() {
             </div>
             <Accordion type="single" collapsible className="w-full mt-12">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Como recebo o acesso ao material?</AccordionTrigger>
+                <AccordionTrigger className="font-headline">Como recebo o acesso ao material?</AccordionTrigger>
                 <AccordionContent>
                   Assim que o pagamento for confirmado, você receberá um e-mail com as instruções e o link para acessar todo o material. Se você escolheu o Plano Premium, o acesso à plataforma online será liberado imediatamente.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>Para qual idade é recomendado?</AccordionTrigger>
+                <AccordionTrigger className="font-headline">Para qual idade é recomendado?</AccordionTrigger>
                 <AccordionContent>
                   O método é projetado para crianças de 2 a 12 anos. Ele é flexível e pode ser adaptado para diferentes estágios de desenvolvimento, desde o estímulo inicial da fala até a consolidação da leitura e escrita.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
+                <AccordionTrigger className="font-headline">Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
                 <AccordionContent>
                   Sim! O método foi especialmente pensado para elas. A abordagem visual, estruturada e sem excesso de estímulos cria um ambiente de aprendizado seguro e eficaz para crianças com Transtorno do Espectro Autista (TEA) e Transtorno de Déficit de Atenção e Hiperatividade (TDAH).
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger>Preciso ter algum conhecimento prévio?</AccordionTrigger>
+                <AccordionTrigger className="font-headline">Preciso ter algum conhecimento prévio?</AccordionTrigger>
                 <AccordionContent>
                   Não precisa. O material é autoexplicativo e foi feito tanto para pais, mães e cuidadores quanto para profissionais da educação. O Plano Premium oferece um plano de estudos semanal para guiar você passo a passo.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="item-5">
-                <AccordionTrigger>E se eu não gostar do método?</AccordionTrigger>
+                <AccordionTrigger className="font-headline">E se eu não gostar do método?</AccordionTrigger>
                 <AccordionContent>
                   Nós oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, basta nos enviar um e-mail e devolveremos 100% do seu investimento, sem perguntas.
                 </AccordionContent>
