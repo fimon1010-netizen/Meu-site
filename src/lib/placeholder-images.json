@@ -44,20 +44,92 @@
     },
     {
       "id": "testimonial-avatar-1",
-      "description": "Avatar for Mariana Silva.",
-      "imageUrl": "https://images.unsplash.com/photo-1624561272659-224ea122b2e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman avatar"
     },
     {
       "id": "testimonial-avatar-2",
-      "description": "Avatar for Carlos Oliveira.",
-      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBhdmF0YXJ8ZW58MHx8fHwxNzY3MjcxMDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man avatar"
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1569913486515-b74bf7751574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
     },
     {
       "id": "testimonial-avatar-3",
-      "description": "Avatar for Ana Santos.",
-      "imageUrl": "https://images.unsplash.com/photo-1569913486515-b74bf7751574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1624561272659-224ea122b2e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-4",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-5",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1678889284814-be932734a596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBhdmF0YXJ8ZW58MHx8fHwxNzY3MjQ5NjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-6",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-7",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1624561272659-224ea122b2e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-8",
+      "description": "Avatar for a male customer",
+      "imageUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBhdmF0YXJ8ZW58MHx8fHwxNzY3MjcxMDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man avatar"
+    },
+    {
+      "id": "testimonial-avatar-9",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-10",
+      "description": "Avatar for a male customer",
+      "imageUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBhdmF0YXJ8ZW58MHx8fHwxNzY3MjcxMDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man avatar"
+    },
+    {
+      "id": "testimonial-avatar-11",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1624561272659-224ea122b2e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-12",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1643732994192-03856731da2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-13",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1678889284814-be932734a596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBhdmF0YXJ8ZW58MHx8fHwxNzY3MjQ5NjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-14",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "testimonial-avatar-15",
+      "description": "Avatar for a female customer",
+      "imageUrl": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGF2YXRhcnxlbnwwfHx8fDE3NjcyNDk2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman avatar"
     }
   ]

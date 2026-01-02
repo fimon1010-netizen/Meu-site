@@ -38,16 +38,21 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Logo } from '@/components/logo';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { testimonials } from '@/lib/testimonials';
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-child-learning');
 const methodImage = PlaceHolderImages.find((img) => img.id === 'method-image');
 const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
-const testimonialAvatar1 = PlaceHolderImages.find((img) => img.id === 'testimonial-avatar-1');
-const testimonialAvatar2 = PlaceHolderImages.find((img) => img.id === 'testimonial-avatar-2');
-const testimonialAvatar3 = PlaceHolderImages.find((img) => img.id === 'testimonial-avatar-3');
 
 
 export default function HomePage() {
@@ -270,70 +275,6 @@ export default function HomePage() {
           <p className="mt-8 text-sm text-center text-muted-foreground md:text-base">Acreditamos que cada criança aprende melhor quando se sente segura.</p>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-12 bg-white lg:py-20 dark:bg-card">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
-                O Que Nossos Clientes Dizem
-              </h2>
-            </div>
-            <div className="grid max-w-5xl gap-8 mx-auto mt-12 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="flex flex-col">
-                <CardContent className="flex-grow p-6">
-                  <p className="text-muted-foreground">
-                    "Salvou minha festa! As crianças amaram a caça ao tesouro adaptada."
-                  </p>
-                </CardContent>
-                <CardHeader className="flex flex-row items-center gap-4 pt-0">
-                  {testimonialAvatar1 && <Avatar>
-                    <AvatarImage src={testimonialAvatar1.imageUrl} alt="Mariana Silva" />
-                    <AvatarFallback>MS</AvatarFallback>
-                  </Avatar>}
-                  <div>
-                    <CardTitle className="text-base">Mariana Silva</CardTitle>
-                    <CardDescription className="text-xs sm:text-sm">São Paulo, SP • Mãe de 3</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-              <Card className="flex flex-col">
-                <CardContent className="flex-grow p-6">
-                  <p className="text-muted-foreground">
-                    "Material profissional. Uso todo final de semana nos meus eventos."
-                  </p>
-                </CardContent>
-                <CardHeader className="flex flex-row items-center gap-4 pt-0">
-                  {testimonialAvatar2 && <Avatar>
-                    <AvatarImage src={testimonialAvatar2.imageUrl} alt="Carlos Oliveira" />
-                    <AvatarFallback>CO</AvatarFallback>
-                  </Avatar>}
-                  <div>
-                    <CardTitle className="text-base">Carlos Oliveira</CardTitle>
-                    <CardDescription className="text-xs sm:text-sm">Rio de Janeiro, RJ • Recreador Profissional</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-              <Card className="flex flex-col">
-                <CardContent className="flex-grow p-6">
-                  <p className="text-muted-foreground">
-                    "Muito bem organizado e fácil de aplicar. O melhor investimento que fiz."
-                  </p>
-                </CardContent>
-                <CardHeader className="flex flex-row items-center gap-4 pt-0">
-                  {testimonialAvatar3 && <Avatar>
-                    <AvatarImage src={testimonialAvatar3.imageUrl} alt="Ana Santos" />
-                    <AvatarFallback>AS</AvatarFallback>
-                  </Avatar>}
-                  <div>
-                    <CardTitle className="text-base">Ana Santos</CardTitle>
-                    <CardDescription className="text-xs sm:text-sm">Curitiba, PR • Professora</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section id="planos" className="container py-12 text-center lg:py-24">
           <div className="max-w-3xl mx-auto">
@@ -465,6 +406,57 @@ export default function HomePage() {
                 Você tem 7 dias para experimentar o método. Se não estiver satisfeito, devolvemos seu dinheiro, sem perguntas.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-12 bg-white lg:py-20 dark:bg-card">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl font-bold tracking-tighter font-headline sm:text-3xl">
+                🌟 O Que Nossos Clientes Dizem
+              </h2>
+            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-4xl mx-auto mt-12"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => {
+                  const avatar = PlaceHolderImages.find(p => p.id === `testimonial-avatar-${index + 1}`);
+                  return (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <Card className="flex flex-col h-full">
+                          <CardContent className="flex-grow p-6">
+                            <p className="text-muted-foreground">
+                              “{testimonial.text}”
+                            </p>
+                          </CardContent>
+                          <CardHeader className="flex flex-row items-center gap-4 pt-0">
+                            {avatar && (
+                              <Avatar>
+                                <AvatarImage src={avatar.imageUrl} alt={testimonial.author} />
+                                <AvatarFallback>{testimonial.author.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                              </Avatar>
+                            )}
+                            <div>
+                              <CardTitle className="text-base">{testimonial.author}</CardTitle>
+                              <CardDescription className="text-xs sm:text-sm">{testimonial.location} • {testimonial.role}</CardDescription>
+                            </div>
+                          </CardHeader>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  )
+                })}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
 
