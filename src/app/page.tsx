@@ -221,8 +221,8 @@ export default function HomePage() {
                     src={methodImage.imageUrl}
                     alt={methodImage.description}
                     data-ai-hint={methodImage.imageHint}
-                    width={600}
-                    height={400}
+                    width={1200}
+                    height={800}
                     className="object-cover w-full rounded-lg shadow-lg"
                   />
                 )}
