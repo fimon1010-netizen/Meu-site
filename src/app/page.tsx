@@ -375,7 +375,7 @@ export default function HomePage() {
             <div className='mt-12'>
               <Link href="/dashboard">
                 <Button size="lg" className="h-auto px-6 py-4 text-lg">
-                  Quero Ajudar Meu Filho a se Comunicar
+                  Baixar PDF
                   <ChevronRight className="ml-2" />
                 </Button>
               </Link>
