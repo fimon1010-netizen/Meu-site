@@ -381,15 +381,15 @@ export default function HomePage() {
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
           <div className="container">
             <div className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-3">
-              <div className="lg:col-span-1">
+              <div className="flex justify-center lg:col-span-1">
                 {authorImage && (
                   <Image
                     src={authorImage.imageUrl}
                     alt={authorImage.description}
                     data-ai-hint={authorImage.imageHint}
-                    width={400}
-                    height={400}
-                    className="object-cover w-full rounded-lg shadow-lg aspect-square"
+                    width={300}
+                    height={300}
+                    className="object-cover rounded-lg shadow-lg aspect-square"
                   />
                 )}
               </div>
