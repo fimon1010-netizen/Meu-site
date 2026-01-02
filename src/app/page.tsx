@@ -51,7 +51,7 @@ export default function HomePage() {
         <section className="container py-12 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-extrabold tracking-tighter font-headline sm:text-5xl md:text-6xl">
-              <span className="text-accent">🌟</span> Descubra o{' '}
+              <span className="text-primary">🌟</span> Descubra o{' '}
               <span className="text-primary">MÉTODO ALEMÃO ADAPTADO</span>
             </h1>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight font-headline sm:text-3xl">
@@ -95,25 +95,25 @@ export default function HomePage() {
         <section className="container py-12">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div className="space-y-6">
-              <Badge variant="secondary">👶 Para crianças de 2 a 12 anos</Badge>
+              <Badge variant="outline" className="border-primary/50 text-primary">👶 Para crianças de 2 a 12 anos</Badge>
               <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 O caminho seguro para a comunicação
               </h2>
               <ul className="space-y-4 text-lg text-muted-foreground">
                 <li className="flex items-start">
-                  <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
+                  <Check className="w-6 h-6 mt-1 mr-3 text-secondary-foreground shrink-0" />
                   <span>Mesmo que ainda <span className="font-semibold text-foreground">não fale claramente</span> ou <span className="font-semibold text-foreground">não reconheça letras</span></span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
+                  <Check className="w-6 h-6 mt-1 mr-3 text-secondary-foreground shrink-0" />
                   <span>Ideal para crianças com <span className="font-semibold text-foreground">TEA, TDAH ou atraso na linguagem</span></span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
+                  <Check className="w-6 h-6 mt-1 mr-3 text-secondary-foreground shrink-0" />
                   <span>Método visual, previsível e progressivo</span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="w-6 h-6 mt-1 mr-3 text-green-500 shrink-0" />
+                  <Check className="w-6 h-6 mt-1 mr-3 text-secondary-foreground shrink-0" />
                   <span>Sem estímulos excessivos, sem cobrança</span>
                 </li>
               </ul>
@@ -308,9 +308,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent className="flex flex-col flex-grow gap-4">
                 <ul className="space-y-3">
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Acesso a atividades de som</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Exercícios de traçado (iniciante)</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Acompanhamento de progresso</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso a atividades de som</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Exercícios de traçado (iniciante)</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acompanhamento de progresso</li>
                 </ul>
                 <div className="mt-auto">
                   <Button variant="secondary" className="w-full">
@@ -332,10 +332,10 @@ export default function HomePage() {
               <CardContent className="flex flex-col flex-grow gap-4">
                 <ul className="space-y-3">
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-primary" /><strong>Tudo do plano Básico, e mais:</strong></li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Acesso a todas as atividades</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Personalização de conteúdo com IA</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Relatórios de progresso detalhados</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-500" />Suporte prioritário</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso a todas as atividades</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Personalização de conteúdo com IA</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Relatórios de progresso detalhados</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Suporte prioritário</li>
                 </ul>
                 <div className="mt-auto">
                    <Button className="w-full">
@@ -354,10 +354,10 @@ export default function HomePage() {
               👨‍👩‍👧 Para quem é esta plataforma?
             </h2>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Badge variant="secondary" className="text-base">Crianças com TEA</Badge>
-              <Badge variant="secondary" className="text-base">Atraso na fala ou escrita</Badge>
-              <Badge variant="secondary" className="text-base">Pais que desejam ajudar</Badge>
-              <Badge variant="secondary" className="text-base">Educadores e Terapeutas</Badge>
+              <Badge variant="outline" className="text-base border-primary/50 text-primary">Crianças com TEA</Badge>
+              <Badge variant="outline" className="text-base border-primary/50 text-primary">Atraso na fala ou escrita</Badge>
+              <Badge variant="outline" className="text-base border-primary/50 text-primary">Pais que desejam ajudar</Badge>
+              <Badge variant="outline" className="text-base border-primary/50 text-primary">Educadores e Terapeutas</Badge>
             </div>
             <div className='mt-12'>
               <Link href="/dashboard">
