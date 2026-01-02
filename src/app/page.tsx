@@ -392,9 +392,6 @@ export default function HomePage() {
               &copy; {new Date().getFullYear()} Todos os direitos reservados.
             </p>
           </div>
-          <div className="text-sm text-muted-foreground">
-            Feito com 💙 para um desenvolvimento seguro.
-          </div>
         </div>
       </footer>
     </div>
