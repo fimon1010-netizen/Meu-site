@@ -125,7 +125,7 @@ export default function HomePage() {
               <p className="text-xl font-medium">
                 ✨ Aqui o foco é desenvolver a comunicação, não forçar resultados.
               </p>
-              <div className="mt-8">
+              <div className="flex justify-center mt-8">
                 <Button asChild size="lg" className="h-auto px-8 py-4 text-lg">
                   <Link href="#planos">
                     <Download className="mr-2" />
