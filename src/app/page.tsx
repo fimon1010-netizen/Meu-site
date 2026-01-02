@@ -27,6 +27,17 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Logo } from '@/components/logo';
 
@@ -322,9 +333,34 @@ export default function HomePage() {
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Rotina diária orientada</li>
                 </ul>
                 <div className="mt-auto">
-                  <Button variant="secondary" className="w-full">
-                    Começar com o Básico
-                  </Button>
+                   <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="secondary" className="w-full">
+                        Começar com o Básico
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle className='text-center text-2xl font-bold text-green-600'>
+                          🎉 OFERTA ESPECIAL SÓ HOJE! 🎉
+                        </AlertDialogTitle>
+                        <AlertDialogDescription className='text-center text-base'>
+                          Leve o <strong className='font-bold text-primary'>Plano Premium</strong> com todos os benefícios por apenas <br />
+                           <span className='text-3xl font-bold text-green-500'>R$19,90/mês</span>!
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter className='flex-col gap-2 sm:flex-col sm:space-x-0'>
+                        <Button asChild size='lg' className='h-auto py-3 text-lg animate-pulse'>
+                          <Link href='/dashboard'>
+                            <Sparkles className="mr-2" /> QUERO O PREMIUM AGORA!
+                          </Link>
+                        </Button>
+                        <AlertDialogCancel asChild>
+                           <Button variant="link" size="sm" className="text-muted-foreground">Não, obrigado. Prefiro o plano Básico.</Button>
+                        </AlertDialogCancel>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </div>
               </CardContent>
             </Card>
@@ -351,8 +387,10 @@ export default function HomePage() {
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Suporte prioritário</li>
                 </ul>
                 <div className="mt-auto">
-                   <Button className="w-full">
-                    Escolher Premium <Sparkles className="ml-2" />
+                   <Button className="w-full" asChild>
+                    <Link href='/dashboard'>
+                      Escolher Premium <Sparkles className="ml-2" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>

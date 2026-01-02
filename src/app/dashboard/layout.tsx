@@ -60,6 +60,7 @@ export default function DashboardLayout({
                 <SidebarMenuButton
                   asChild
                   tooltip="Dashboard"
+                  isActive={true}
                 >
                   <Link href="/dashboard">
                     <LayoutDashboard />
@@ -129,9 +130,11 @@ export default function DashboardLayout({
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <LogOut className="mr-2 h-4 w-4" />
-                  <span>Sair</span>
+                <DropdownMenuItem asChild>
+                  <Link href='/'>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Sair</span>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
