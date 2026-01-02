@@ -57,6 +57,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Logo } from '@/components/logo';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
+import { SalesNotification } from '@/components/sales-notification';
+import { recentPurchases } from '@/lib/purchases';
+
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-child-learning');
 const methodImage = PlaceHolderImages.find((img) => img.id === 'method-image');
@@ -65,6 +68,9 @@ const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
 
 export default function HomePage() {
   const [currentDate, setCurrentDate] = useState('');
+  const [currentPurchase, setCurrentPurchase] = useState<{name: string, location: string} | null>(null);
+  const [showNotification, setShowNotification] = useState(false);
+
    const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
@@ -77,8 +83,39 @@ export default function HomePage() {
     setCurrentDate(`${day}/${month}/${year}`);
   }, []);
 
+    useEffect(() => {
+    let purchaseIndex = 0;
+
+    const showAndHideNotification = () => {
+      setShowNotification(true);
+      setCurrentPurchase(recentPurchases[purchaseIndex]);
+
+      setTimeout(() => {
+        setShowNotification(false);
+        purchaseIndex = (purchaseIndex + 1) % recentPurchases.length;
+      }, 4000); // Notification stays visible for 4 seconds
+    };
+
+    // Show the first notification immediately
+    showAndHideNotification();
+    
+    // Then set interval for subsequent notifications
+    const intervalId = setInterval(showAndHideNotification, 8000); // Show a new notification every 8 seconds (4s visible + 4s hidden)
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Sales Notification */}
+      {showNotification && currentPurchase && (
+        <SalesNotification
+          name={currentPurchase.name}
+          location={currentPurchase.location}
+        />
+      )}
+
       {/* Discount Banner */}
       <div className="py-2 text-center bg-accent text-accent-foreground">
         <p className="font-semibold text-sm">
@@ -467,7 +504,7 @@ export default function HomePage() {
         </section>
         
         {/* FAQ Section */}
-        <section className="py-12 bg-white lg:py-20 dark:bg-card">
+        <section className="py-12 bg-white lg-py-20 dark:bg-card">
           <div className="container max-w-4xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
