@@ -374,8 +374,10 @@ export default function HomePage() {
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
-                        <AlertDialogCancel onClick={() => window.open('https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94', '_blank')}>
-                          Não, obrigado. Prefiro o plano Básico.
+                        <AlertDialogCancel asChild>
+                          <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
+                             Não, obrigado. Prefiro o plano Básico.
+                          </a>
                         </AlertDialogCancel>
                         <AlertDialogAction asChild>
                           <Link href='/dashboard'>
@@ -393,8 +395,8 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="font-headline text-xl md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
-                   <span className="text-xl font-normal text-red-500 line-through">R$139,95</span>
-                  <span className="text-4xl font-bold md:text-5xl">R$27,99</span>
+                   <span className="text-xl font-normal text-red-500 line-through">R$99,50</span>
+                  <span className="text-4xl font-bold md:text-5xl">R$19,90</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <CardDescription>Acesso completo e personalizado para acelerar os resultados.</CardDescription>
@@ -406,7 +408,6 @@ export default function HomePage() {
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Conteúdo cristão simples</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Atividades adaptadas para crianças autistas</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Material de pintar cristão</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Personalização de conteúdo</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acompanhamento individual</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Suporte prioritário</li>
                 </ul>
