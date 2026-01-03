@@ -255,14 +255,16 @@ export default function HomePage() {
         {/* What is the method Section */}
         <section className="py-12 bg-white lg:py-20 dark:bg-card">
           <div className="container">
+            <div className="flex justify-center mb-8">
+              <Button asChild size="lg" className="h-auto px-8 py-4 text-base">
+                <Link href="#planos">
+                  <Download className="mr-2" />
+                  Baixar PDF
+                </Link>
+              </Button>
+            </div>
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div className="order-last md:order-first">
-                 <Button asChild size="lg" className="mb-8 h-auto px-8 py-4 text-base">
-                  <Link href="#planos">
-                    <Download className="mr-2" />
-                    Baixar PDF
-                  </Link>
-                </Button>
                 <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                   🧠 O que é o Método Alemão Adaptado?
                 </h2>
