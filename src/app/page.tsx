@@ -375,7 +375,7 @@ export default function HomePage() {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel asChild>
-                          <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
+                           <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
                              Não, obrigado. Prefiro o plano Básico.
                           </a>
                         </AlertDialogCancel>
@@ -395,6 +395,7 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="text-xl font-headline md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
+                  <span className="text-xl font-normal text-red-500 line-through">R$139,95</span>
                   <span className="text-4xl font-bold md:text-5xl">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
