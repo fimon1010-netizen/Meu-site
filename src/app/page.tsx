@@ -382,7 +382,9 @@ export default function HomePage() {
                           </Link>
                         </Button>
                         <AlertDialogCancel asChild>
-                           <Button variant="link" size="sm" className="text-muted-foreground">Não, obrigado. Prefiro o plano Básico.</Button>
+                           <Button variant="link" size="sm" className="text-muted-foreground" asChild>
+                             <Link href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94">Não, obrigado. Prefiro o plano Básico.</Link>
+                           </Button>
                         </AlertDialogCancel>
                       </AlertDialogFooter>
                     </AlertDialogContent>
