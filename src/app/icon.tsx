@@ -12,10 +12,12 @@ export default async function Icon() {
   const imageUrl = "https://i.postimg.cc/1XnHBPBD/Inserir-um-titulo.png";
 
   try {
+    // A fetch call is needed to get the image data
     const response = await fetch(imageUrl);
     if (!response.ok) {
       return new Response('Failed to fetch image', { status: 500 });
     }
+    // We can use the ArrayBuffer from the response directly in an ImageResponse
     const image = await response.arrayBuffer();
 
     return new ImageResponse(
@@ -34,6 +36,7 @@ export default async function Icon() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
+            // The src can be the ArrayBuffer converted to a data URL
             src={imageUrl} 
             alt="Fala & Traça Logo"
             width={32}
@@ -47,6 +50,7 @@ export default async function Icon() {
     )
   } catch (e) {
     console.error(e);
+    // Return a generic error response
     return new Response('Failed to generate icon', { status: 500 });
   }
 }
