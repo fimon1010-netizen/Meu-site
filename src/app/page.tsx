@@ -69,7 +69,7 @@ const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
 export default function HomePage() {
   const [currentDate, setCurrentDate] = useState('');
   const [currentPurchase, setCurrentPurchase] = useState<{name: string, location: string} | null>(null);
-  const [showNotification, setShowNotification] = useState(false);
+  const [showNotification, setShowNotification]_ = useState(false);
 
    const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -395,8 +395,7 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="text-xl font-headline md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
-                   <span className="text-xl font-normal text-red-500 line-through">R$99,50</span>
-                  <span className="text-4xl font-bold md:text-5xl">R$19,90</span>
+                  <span className="text-4xl font-bold md:text-5xl">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <CardDescription>Acesso completo e personalizado para acelerar os resultados.</CardDescription>
@@ -405,7 +404,7 @@ export default function HomePage() {
                 <ul className="space-y-3">
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-primary" /><strong>Tudo do Plano Básico, e mais:</strong></li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso a todas as atividades</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Conteúdo cristão simples</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Conteúdo cristão exclusivo</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Atividades adaptadas para crianças autistas</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Material de pintar cristão</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acompanhamento individual</li>
