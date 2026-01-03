@@ -307,11 +307,11 @@ export default function HomePage() {
           <div className="grid max-w-4xl gap-8 mx-auto mt-12 md:grid-cols-2">
             <Card className="p-2 border-red-200 sm:p-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-red-500 text-lg md:text-xl">
+                <CardTitle className="flex items-center gap-2 text-lg text-red-500 md:text-xl">
                   ❌ Abordagem comum
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-muted-foreground text-sm md:text-base">
+              <CardContent className="space-y-2 text-sm text-muted-foreground md:text-base">
                 <p>Pula etapas do desenvolvimento</p>
                 <p>Exige leitura antes da hora</p>
                 <p>Ambientes confusos e estimulantes demais</p>
@@ -319,11 +319,11 @@ export default function HomePage() {
             </Card>
             <Card className="p-2 border-green-200 sm:p-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-green-600 text-lg md:text-xl">
+                <CardTitle className="flex items-center gap-2 text-lg text-green-600 md:text-xl">
                   💙 Nossa abordagem
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-muted-foreground text-sm md:text-base">
+              <CardContent className="space-y-2 text-sm text-muted-foreground md:text-base">
                 <p>Estrutura e previsibilidade</p>
                 <p>Repetição calma e estímulo visual</p>
                 <p>Segurança emocional para avançar sem pressão</p>
@@ -346,7 +346,7 @@ export default function HomePage() {
           <div className="grid max-w-5xl gap-8 mx-auto mt-12 md:grid-cols-2">
             <Card className="flex flex-col text-left">
               <CardHeader className="flex-grow">
-                <CardTitle className="font-headline text-xl md:text-2xl">📘 Plano Básico</CardTitle>
+                <CardTitle className="text-xl font-headline md:text-2xl">📘 Plano Básico</CardTitle>
                 <div className="flex items-baseline gap-2">
                   <span className="text-xl font-normal text-red-500 line-through">R$50</span>
                   <span className="text-4xl font-bold md:text-5xl">R$10</span>
@@ -369,7 +369,7 @@ export default function HomePage() {
                       <AlertDialogHeader>
                         <AlertDialogTitle className="font-headline">✨ Oferta Especial por Tempo Limitado!</AlertDialogTitle>
                         <AlertDialogDescription>
-                          Que tal ter acesso completo? Por apenas mais R$17,99/mês, você migra para o <strong>Plano Premium</strong> e desbloqueia TODAS as atividades, personalização com IA, suporte e muito mais.
+                          Que tal ter acesso completo? Por apenas <strong>R$19,90/mês</strong>, você migra para o <strong>Plano Premium</strong> e desbloqueia TODAS as atividades, suporte e muito mais.
                           É a melhor escolha para acelerar o desenvolvimento do seu filho!
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -393,7 +393,7 @@ export default function HomePage() {
             <Card className="relative flex flex-col text-left border-2 border-primary bg-blue-50/50 dark:bg-blue-900/10 shadow-lg">
               <Badge className="absolute px-3 py-1 text-xs -top-4 left-1/2 -translate-x-1/2">Mais Popular</Badge>
               <CardHeader className="flex-grow">
-                <CardTitle className="font-headline text-xl md:text-2xl">🌟 Plano Premium</CardTitle>
+                <CardTitle className="text-xl font-headline md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
                    <span className="text-xl font-normal text-red-500 line-through">R$99,50</span>
                   <span className="text-4xl font-bold md:text-5xl">R$19,90</span>
@@ -496,13 +496,13 @@ export default function HomePage() {
               <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">
                 Quem fez o MÉTODO ALEMÃO ADAPTADO?
               </h2>
-              <p className="text-muted-foreground text-sm md:text-base">
+              <p className="text-sm text-muted-foreground md:text-base">
                 Este material foi montado pelo professor e terapeuta Ari Lopes, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
               </p>
-              <p className="text-muted-foreground text-sm md:text-base">
+              <p className="text-sm text-muted-foreground md:text-base">
                 O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
               </p>
-              <p className="text-muted-foreground text-sm md:text-base">
+              <p className="text-sm text-muted-foreground md:text-base">
                 Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
               </p>
             </div>
@@ -522,31 +522,31 @@ export default function HomePage() {
             </div>
             <Accordion type="single" collapsible className="w-full mt-12">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="font-headline text-lg">Como recebo o acesso ao material?</AccordionTrigger>
+                <AccordionTrigger className="text-lg font-headline">Como recebo o acesso ao material?</AccordionTrigger>
                 <AccordionContent>
                   Assim que o pagamento for confirmado, você receberá um e-mail com as instruções e o link para acessar todo o material. Se você escolheu o Plano Premium, o acesso à plataforma online será liberado imediatamente.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="font-headline text-lg">Para qual idade é recomendado?</AccordionTrigger>
+                <AccordionTrigger className="text-lg font-headline">Para qual idade é recomendado?</AccordionTrigger>
                 <AccordionContent>
                   O método é projetado para crianças de 2 a 12 anos. Ele é flexível e pode ser adaptado para diferentes estágios de desenvolvimento, desde o estímulo inicial da fala até a consolidação da leitura e escrita.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="font-headline text-lg">Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
+                <AccordionTrigger className="text-lg font-headline">Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
                 <AccordionContent>
                   Sim! O método foi especialmente pensado para elas. A abordagem visual, estruturada e sem excesso de estímulos cria um ambiente de aprendizado seguro e eficaz para crianças com Transtorno do Espectro Autista (TEA) e Transtorno de Déficit de Atenção e Hiperatividade (TDAH).
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="font-headline text-lg">Preciso ter algum conhecimento prévio?</AccordionTrigger>
+                <AccordionTrigger className="text-lg font-headline">Preciso ter algum conhecimento prévio?</AccordionTrigger>
                 <AccordionContent>
                   Não precisa. O material é autoexplicativo e foi feito tanto para pais, mães e cuidadores quanto para profissionais da educação. O Plano Premium oferece um plano de estudos semanal para guiar você passo a passo.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="item-5">
-                <AccordionTrigger className="font-headline text-lg">E se eu não gostar do método?</AccordionTrigger>
+                <AccordionTrigger className="text-lg font-headline">E se eu não gostar do método?</AccordionTrigger>
                 <AccordionContent>
                   Nós oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, basta nos enviar um e-mail e devolveremos 100% do seu investimento, sem perguntas.
                 </AccordionContent>
@@ -581,5 +581,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
