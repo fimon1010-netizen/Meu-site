@@ -355,9 +355,6 @@ export default function HomePage() {
               <CardContent className="flex flex-col flex-grow gap-4 text-sm md:text-base">
                 <ul className="space-y-3">
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso ao PDF principal</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Reconhecimento de letras e sílabas</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Conteúdo cristão simples</li>
-                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Rotina diária orientada</li>
                 </ul>
                 <div className="mt-auto">
                    <AlertDialog>
