@@ -347,7 +347,7 @@ export default function HomePage() {
                 <CardTitle className="font-headline text-xl md:text-2xl">📘 Plano Básico</CardTitle>
                 <div className="flex items-baseline gap-2">
                   <span className="text-xl font-normal text-red-500 line-through">R$50</span>
-                  <span className="text-3xl font-bold md:text-4xl">R$10</span>
+                  <span className="text-4xl font-bold md:text-5xl">R$10</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <CardDescription>O essencial para iniciar a alfabetização.</CardDescription>
@@ -397,7 +397,7 @@ export default function HomePage() {
                 <CardTitle className="font-headline text-xl md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
                    <span className="text-xl font-normal text-red-500 line-through">R$139,95</span>
-                  <span className="text-3xl font-bold md:text-4xl">R$27,99</span>
+                  <span className="text-4xl font-bold md:text-5xl">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
                 <CardDescription>Acesso completo e personalizado para acelerar os resultados.</CardDescription>
