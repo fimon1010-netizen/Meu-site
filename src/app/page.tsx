@@ -359,11 +359,32 @@ export default function HomePage() {
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso ao PDF principal</li>
                 </ul>
                 <div className="mt-auto">
-                   <Button variant="secondary" className="w-full" asChild>
-                      <Link href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank">
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="secondary" className="w-full">
                         Começar com o Básico
-                      </Link>
-                    </Button>
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle className="font-headline">✨ Oferta Especial por Tempo Limitado!</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Que tal ter acesso completo? Por apenas mais R$17,99/mês, você migra para o <strong>Plano Premium</strong> e desbloqueia TODAS as atividades, personalização com IA, suporte e muito mais.
+                          É a melhor escolha para acelerar o desenvolvimento do seu filho!
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel onClick={() => window.open('https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94', '_blank')}>
+                          Não, obrigado. Prefiro o plano Básico.
+                        </AlertDialogCancel>
+                        <AlertDialogAction asChild>
+                          <Link href='/dashboard'>
+                            Sim, quero o Premium!
+                          </Link>
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </div>
               </CardContent>
             </Card>
@@ -559,3 +580,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
