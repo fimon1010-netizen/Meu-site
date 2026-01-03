@@ -380,9 +380,9 @@ export default function HomePage() {
                           </a>
                         </AlertDialogCancel>
                         <AlertDialogAction asChild>
-                          <Link href='/dashboard'>
+                          <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
                             Sim, quero o Premium!
-                          </Link>
+                          </a>
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
@@ -413,9 +413,9 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-auto">
                    <Button className="w-full animate-pulse" asChild>
-                    <Link href='/dashboard'>
+                    <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
                       Escolher Premium <Sparkles className="ml-2" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </CardContent>
