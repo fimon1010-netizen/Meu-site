@@ -346,7 +346,7 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="font-headline text-xl md:text-2xl">📘 Plano Básico</CardTitle>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-xl font-normal text-muted-foreground line-through">R$50</span>
+                  <span className="text-xl font-normal text-red-500 line-through">R$50</span>
                   <span className="text-3xl font-bold md:text-4xl">R$10</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
@@ -396,7 +396,7 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="font-headline text-xl md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
-                   <span className="text-xl font-normal text-muted-foreground line-through">R$139,95</span>
+                   <span className="text-xl font-normal text-red-500 line-through">R$139,95</span>
                   <span className="text-3xl font-bold md:text-4xl">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
