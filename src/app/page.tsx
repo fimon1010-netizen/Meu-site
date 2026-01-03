@@ -380,7 +380,7 @@ export default function HomePage() {
                           </a>
                         </AlertDialogCancel>
                         <AlertDialogAction asChild>
-                          <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
+                          <a href="https://www.ggcheckout.com/checkout/v3/JUcxfrNpKwcaKKEKJalD" target="_blank" rel="noopener noreferrer">
                             Sim, quero o Premium!
                           </a>
                         </AlertDialogAction>
