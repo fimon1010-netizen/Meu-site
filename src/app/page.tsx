@@ -524,7 +524,7 @@ export default function HomePage() {
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-lg font-headline">Como recebo o acesso ao material?</AccordionTrigger>
                 <AccordionContent>
-                  Assim que o pagamento for confirmado, você receberá um e-mail com as instruções e o link para acessar todo o material. Se você escolheu o Plano Premium, o acesso à plataforma online será liberado imediatamente.
+                  Assim que o pagamento for confirmado, você receberá por e-mail ou WhatsApp as instruções e o link para acessar e baixar todo o material em PDF.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -581,5 +581,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
