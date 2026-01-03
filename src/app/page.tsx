@@ -359,36 +359,11 @@ export default function HomePage() {
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-secondary-foreground" />Acesso ao PDF principal</li>
                 </ul>
                 <div className="mt-auto">
-                   <AlertDialog>
-                    <AlertDialogTrigger asChild>
-                      <Button variant="secondary" className="w-full">
+                   <Button variant="secondary" className="w-full" asChild>
+                      <Link href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank">
                         Começar com o Básico
-                      </Button>
-                    </AlertDialogTrigger>
-                    <AlertDialogContent>
-                      <AlertDialogHeader>
-                        <AlertDialogTitle className='text-center text-xl font-bold text-green-600 md:text-2xl'>
-                          🎉 OFERTA ESPECIAL SÓ HOJE! 🎉
-                        </AlertDialogTitle>
-                        <AlertDialogDescription className='text-center text-sm md:text-base'>
-                          Leve o <strong className='font-bold text-primary'>Plano Premium</strong> com todos os benefícios por apenas <br />
-                           <span className='text-2xl font-bold text-green-500 md:text-3xl'>R$19,90/mês</span>!
-                        </AlertDialogDescription>
-                      </AlertDialogHeader>
-                      <AlertDialogFooter className='flex-col gap-2 sm:flex-col sm:space-x-0'>
-                        <Button asChild size='lg' className='h-auto py-3 text-base md:text-lg animate-pulse'>
-                          <Link href='/dashboard'>
-                            <Sparkles className="mr-2" /> QUERO O PREMIUM AGORA!
-                          </Link>
-                        </Button>
-                        <AlertDialogCancel asChild>
-                           <Button variant="link" size="sm" className="text-muted-foreground" asChild>
-                             <Link href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94">Não, obrigado. Prefiro o plano Básico.</Link>
-                           </Button>
-                        </AlertDialogCancel>
-                      </AlertDialogFooter>
-                    </AlertDialogContent>
-                  </AlertDialog>
+                      </Link>
+                    </Button>
                 </div>
               </CardContent>
             </Card>
