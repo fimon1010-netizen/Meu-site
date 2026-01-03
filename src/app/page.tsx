@@ -375,7 +375,7 @@ export default function HomePage() {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel asChild>
-                           <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
+                           <a href="https://www.ggcheckout.com/checkout/v3/he0it1LZhHKLW0y1b9LI" target="_blank" rel="noopener noreferrer">
                              Não, obrigado. Prefiro o plano Básico.
                           </a>
                         </AlertDialogCancel>
@@ -581,3 +581,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
