@@ -69,7 +69,7 @@ const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
 export default function HomePage() {
   const [currentDate, setCurrentDate] = useState('');
   const [currentPurchase, setCurrentPurchase] = useState<{name: string, location: string} | null>(null);
-  const [showNotification, setShowNotification]_ = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
 
    const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -361,7 +361,7 @@ export default function HomePage() {
                 <div className="mt-auto">
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
-                      <Button variant="secondary" className="w-full">
+                       <Button variant="secondary" className="w-full">
                         Começar com o Básico
                       </Button>
                     </AlertDialogTrigger>
