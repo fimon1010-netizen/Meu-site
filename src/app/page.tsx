@@ -499,7 +499,7 @@ export default function HomePage() {
                 Quem fez o MÉTODO ALEMÃO ADAPTADO?
               </h2>
               <p className="text-muted-foreground text-sm md:text-base">
-                Este material foi montado pelo professor e terapeuta Thalyson Alves, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
+                Este material foi montado pelo professor e terapeuta Ari Lopes, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
               </p>
               <p className="text-muted-foreground text-sm md:text-base">
                 O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
