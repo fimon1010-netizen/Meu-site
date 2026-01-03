@@ -87,22 +87,29 @@ export default function HomePage() {
     let purchaseIndex = 0;
 
     const showAndHideNotification = () => {
-      setShowNotification(true);
-      setCurrentPurchase(recentPurchases[purchaseIndex]);
-
+      // Use a random timeout between 5 and 10 seconds to make it feel more natural
+      const randomInterval = Math.floor(Math.random() * 5000) + 5000;
+      
       setTimeout(() => {
-        setShowNotification(false);
-        purchaseIndex = (purchaseIndex + 1) % recentPurchases.length;
-      }, 4000); // Notification stays visible for 4 seconds
+        setShowNotification(true);
+        setCurrentPurchase(recentPurchases[purchaseIndex]);
+
+        setTimeout(() => {
+          setShowNotification(false);
+          purchaseIndex = (purchaseIndex + 1) % recentPurchases.length;
+          showAndHideNotification(); // Schedule the next notification
+        }, 4000); // Notification stays visible for 4 seconds
+      }, randomInterval);
     };
 
-    // Show the first notification immediately
+    // Start the cycle
     showAndHideNotification();
-    
-    // Then set interval for subsequent notifications
-    const intervalId = setInterval(showAndHideNotification, 8000); // Show a new notification every 8 seconds (4s visible + 4s hidden)
 
-    return () => clearInterval(intervalId);
+    // No direct interval needed here as it's handled by recursive setTimeout
+    return () => {
+      // In a real app, you'd want to clear any running timeouts on unmount,
+      // but for this looping behavior, it's simpler to let it run.
+    };
   }, []);
 
 
@@ -339,6 +346,7 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="font-headline text-xl md:text-2xl">📘 Plano Básico</CardTitle>
                 <div className="flex items-baseline gap-2">
+                  <span className="text-xl font-normal text-muted-foreground line-through">R$50</span>
                   <span className="text-3xl font-bold md:text-4xl">R$10</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
@@ -388,6 +396,7 @@ export default function HomePage() {
               <CardHeader className="flex-grow">
                 <CardTitle className="font-headline text-xl md:text-2xl">🌟 Plano Premium</CardTitle>
                  <div className="flex items-baseline gap-2">
+                   <span className="text-xl font-normal text-muted-foreground line-through">R$139,95</span>
                   <span className="text-3xl font-bold md:text-4xl">R$27,99</span>
                   <span className="text-muted-foreground">/mês</span>
                 </div>
@@ -515,31 +524,31 @@ export default function HomePage() {
             </div>
             <Accordion type="single" collapsible className="w-full mt-12">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="font-headline">Como recebo o acesso ao material?</AccordionTrigger>
+                <AccordionTrigger className="font-headline text-lg">Como recebo o acesso ao material?</AccordionTrigger>
                 <AccordionContent>
                   Assim que o pagamento for confirmado, você receberá um e-mail com as instruções e o link para acessar todo o material. Se você escolheu o Plano Premium, o acesso à plataforma online será liberado imediatamente.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="font-headline">Para qual idade é recomendado?</AccordionTrigger>
+                <AccordionTrigger className="font-headline text-lg">Para qual idade é recomendado?</AccordionTrigger>
                 <AccordionContent>
                   O método é projetado para crianças de 2 a 12 anos. Ele é flexível e pode ser adaptado para diferentes estágios de desenvolvimento, desde o estímulo inicial da fala até a consolidação da leitura e escrita.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="font-headline">Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
+                <AccordionTrigger className="font-headline text-lg">Funciona para crianças com TEA ou TDAH?</AccordionTrigger>
                 <AccordionContent>
                   Sim! O método foi especialmente pensado para elas. A abordagem visual, estruturada e sem excesso de estímulos cria um ambiente de aprendizado seguro e eficaz para crianças com Transtorno do Espectro Autista (TEA) e Transtorno de Déficit de Atenção e Hiperatividade (TDAH).
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="font-headline">Preciso ter algum conhecimento prévio?</AccordionTrigger>
+                <AccordionTrigger className="font-headline text-lg">Preciso ter algum conhecimento prévio?</AccordionTrigger>
                 <AccordionContent>
                   Não precisa. O material é autoexplicativo e foi feito tanto para pais, mães e cuidadores quanto para profissionais da educação. O Plano Premium oferece um plano de estudos semanal para guiar você passo a passo.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="item-5">
-                <AccordionTrigger className="font-headline">E se eu não gostar do método?</AccordionTrigger>
+                <AccordionTrigger className="font-headline text-lg">E se eu não gostar do método?</AccordionTrigger>
                 <AccordionContent>
                   Nós oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, basta nos enviar um e-mail e devolveremos 100% do seu investimento, sem perguntas.
                 </AccordionContent>
