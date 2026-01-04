@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Fala & Traça',
-  description: 'Ajuda crianças a falar e escrever com mais clareza, de forma leve, estruturada e sem pressão.',
+  description: 'Ajuda crianças a falar e escrever com mais clareza, de forma leve, estruturada и sem pressão.',
 };
 
 export default function RootLayout({
