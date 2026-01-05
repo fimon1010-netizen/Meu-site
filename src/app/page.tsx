@@ -375,12 +375,12 @@ export default function HomePage() {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel asChild>
-                           <a href="https://www.ggcheckout.com/checkout/v3/he0it1LZhHKLW0y1b9LI" target="_blank" rel="noopener noreferrer">
+                           <a href={isClient ? "https://www.ggcheckout.com/checkout/v3/he0it1LZhHKLW0y1b9LI" : undefined} target="_blank" rel="noopener noreferrer">
                              Não, obrigado. Prefiro o plano Básico.
                           </a>
                         </AlertDialogCancel>
                         <AlertDialogAction asChild>
-                          <a href="https://www.ggcheckout.com/checkout/v3/JUcxfrNpKwcaKKEKJalD" target="_blank" rel="noopener noreferrer">
+                          <a href={isClient ? "https://www.ggcheckout.com/checkout/v3/JUcxfrNpKwcaKKEKJalD" : undefined} target="_blank" rel="noopener noreferrer">
                             Sim, quero o Premium!
                           </a>
                         </AlertDialogAction>
@@ -578,6 +578,14 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+       {isClient && <Script
+        id="utmify-script"
+        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids
+        async
+        defer
+      />}
     </div>
   );
 }
