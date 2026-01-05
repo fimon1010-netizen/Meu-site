@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import {
   BrainCircuit,
   Check,
@@ -115,6 +116,32 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Script id="utimify-back-redirect">
+        {`
+          const link = 'https://meubackredirect.com.br';
+
+          function setBackRedirect(url) {
+            let urlBackRedirect = url;
+            urlBackRedirect = urlBackRedirect =
+              urlBackRedirect.trim() +
+              (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+              document.location.search.replace('?', '').toString();
+
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+
+            window.addEventListener('popstate', () => {
+              console.log('onpopstate', urlBackRedirect);
+              setTimeout(() => {
+                location.href = urlBackRedirect;
+              }, 1);
+            });
+          }
+
+          setBackRedirect(link);
+        `}
+      </Script>
       {/* Sales Notification */}
       {showNotification && currentPurchase && (
         <SalesNotification
@@ -500,7 +527,7 @@ export default function HomePage() {
                 Este material foi montado pelo professor e terapeuta Ari Lopes, que reuniu diversas pesquisas, estudos educacionais e observações práticas para encontrar a melhor forma de aprendizagem para crianças com TEA e TDAH.
               </p>
               <p className="text-sm text-muted-foreground md:text-base">
-                O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão e sem comparações.
+                O método foi cuidadosamente adaptado à realidade infantil, respeitando o ritmo, a sensibilidade e a forma única como cada criança aprende. Tudo foi pensado para tornar o aprendizado mais claro, acessível e leve, sem pressa, sem pressão и sem comparações.
               </p>
               <p className="text-sm text-muted-foreground md:text-base">
                 Um conteúdo desenvolvido com propósito, organização e carinho — unindo conhecimento, estrutura e simplicidade para apoiar o desenvolvimento da leitura, da escrita e da fala. E acima de tudo levando um pouco de Jesus para as crianças.
