@@ -85,7 +85,6 @@ export default function HomePage() {
     const year = date.getFullYear();
     setCurrentDate(`${day}/${month}/${year}`);
 
-    let purchaseIndex = 0;
     let intervalId: any;
 
     const showRandomNotification = () => {
@@ -101,13 +100,14 @@ export default function HomePage() {
     };
 
     // Show the first notification after a short delay
-    setTimeout(() => {
+    const initialTimeout = setTimeout(() => {
         showRandomNotification();
         // Then set an interval for subsequent notifications
         intervalId = setInterval(showRandomNotification, Math.floor(Math.random() * 5000) + 8000); // 8-13 seconds
     }, 5000); // Initial delay
 
     return () => {
+      clearTimeout(initialTimeout);
       clearInterval(intervalId);
     };
   }, []);
@@ -413,7 +413,7 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-auto">
                    <Button className="w-full animate-pulse" asChild>
-                    <a href="https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" target="_blank" rel="noopener noreferrer">
+                    <a href={isClient ? "https://www.ggcheckout.com/checkout/v3/wGoyGJ4RNMdtyUSE1b94" : undefined} target="_blank" rel="noopener noreferrer">
                       Escolher Premium <Sparkles className="ml-2" />
                     </a>
                   </Button>
