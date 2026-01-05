@@ -71,54 +71,52 @@ export default function HomePage() {
   const [currentDate, setCurrentDate] = useState('');
   const [currentPurchase, setCurrentPurchase] = useState<{name: string, location: string} | null>(null);
   const [showNotification, setShowNotification] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
    const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
 
   useEffect(() => {
+    setIsClient(true);
     const date = new Date();
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
     setCurrentDate(`${day}/${month}/${year}`);
-  }, []);
 
-    useEffect(() => {
     let purchaseIndex = 0;
+    let intervalId: any;
 
-    const showAndHideNotification = () => {
-      // Use a random timeout between 5 and 10 seconds to make it feel more natural
-      const randomInterval = Math.floor(Math.random() * 5000) + 5000;
-      
+    const showRandomNotification = () => {
+      // Pick a random purchase
+      const randomIndex = Math.floor(Math.random() * recentPurchases.length);
+      setCurrentPurchase(recentPurchases[randomIndex]);
+      setShowNotification(true);
+
+      // Hide notification after 4 seconds
       setTimeout(() => {
-        setShowNotification(true);
-        setCurrentPurchase(recentPurchases[purchaseIndex]);
-
-        setTimeout(() => {
-          setShowNotification(false);
-          purchaseIndex = (purchaseIndex + 1) % recentPurchases.length;
-          showAndHideNotification(); // Schedule the next notification
-        }, 4000); // Notification stays visible for 4 seconds
-      }, randomInterval);
+        setShowNotification(false);
+      }, 4000);
     };
 
-    // Start the cycle
-    showAndHideNotification();
+    // Show the first notification after a short delay
+    setTimeout(() => {
+        showRandomNotification();
+        // Then set an interval for subsequent notifications
+        intervalId = setInterval(showRandomNotification, Math.floor(Math.random() * 5000) + 8000); // 8-13 seconds
+    }, 5000); // Initial delay
 
-    // No direct interval needed here as it's handled by recursive setTimeout
     return () => {
-      // In a real app, you'd want to clear any running timeouts on unmount,
-      // but for this looping behavior, it's simpler to let it run.
+      clearInterval(intervalId);
     };
   }, []);
-
 
   return (
     <div className="flex flex-col min-h-screen">
       
       {/* Sales Notification */}
-      {showNotification && currentPurchase && (
+      {isClient && showNotification && currentPurchase && (
         <SalesNotification
           name={currentPurchase.name}
           location={currentPurchase.location}
@@ -128,7 +126,7 @@ export default function HomePage() {
       {/* Discount Banner */}
       <div className="py-2 text-center bg-accent text-accent-foreground">
         <p className="font-semibold text-sm">
-          🔥 DESCONTO SÓ HOJE – {currentDate} 🔥
+          🔥 DESCONTO SÓ HOJE – {isClient ? currentDate : ''} 🔥
         </p>
       </div>
 
