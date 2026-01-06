@@ -68,10 +68,10 @@ const authorImage = PlaceHolderImages.find((img) => img.id === 'author-photo');
 
 
 export default function HomePage() {
+  const [isClient, setIsClient] = useState(false);
   const [currentDate, setCurrentDate] = useState('');
   const [currentPurchase, setCurrentPurchase] = useState<{name: string, location: string} | null>(null);
   const [showNotification, setShowNotification] = useState(false);
-  const [isClient, setIsClient] = useState(false);
 
    const plugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -79,6 +79,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setIsClient(true);
+    
     const date = new Date();
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -88,23 +89,19 @@ export default function HomePage() {
     let intervalId: any;
 
     const showRandomNotification = () => {
-      // Pick a random purchase
       const randomIndex = Math.floor(Math.random() * recentPurchases.length);
       setCurrentPurchase(recentPurchases[randomIndex]);
       setShowNotification(true);
 
-      // Hide notification after 4 seconds
       setTimeout(() => {
         setShowNotification(false);
       }, 4000);
     };
 
-    // Show the first notification after a short delay
     const initialTimeout = setTimeout(() => {
         showRandomNotification();
-        // Then set an interval for subsequent notifications
         intervalId = setInterval(showRandomNotification, Math.floor(Math.random() * 5000) + 8000); // 8-13 seconds
-    }, 5000); // Initial delay
+    }, 5000); 
 
     return () => {
       clearTimeout(initialTimeout);
@@ -115,7 +112,6 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       
-      {/* Sales Notification */}
       {isClient && showNotification && currentPurchase && (
         <SalesNotification
           name={currentPurchase.name}
