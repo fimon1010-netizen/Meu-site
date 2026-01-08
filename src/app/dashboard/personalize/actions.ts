@@ -1,5 +1,3 @@
-'use server';
-
 import { z } from 'zod';
 
 export const formSchema = z.object({
@@ -17,8 +15,8 @@ export async function generateContentAction(
     success: true,
     data: {
       title: 'Atividade de Exemplo',
-      description: 'Conteúdo gerado de forma temporária.',
-      activityContent: 'Aqui vai a atividade gerada.',
+      description: 'Descrição gerada de forma estática para evitar erro de build.',
+      activityContent: 'Conteúdo da atividade de exemplo.',
     },
   };
 }
