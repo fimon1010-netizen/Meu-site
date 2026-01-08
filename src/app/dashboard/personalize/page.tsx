@@ -26,15 +26,13 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import type { PersonalizedLearningContentOutput } from '@/ai/flows/personalized-learning-content';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { generateContentAction, formSchema } from './actions';
-
 
 export default function PersonalizePage() {
   const { toast } = useToast();
   const [loading, setLoading] = React.useState(false);
-  const [result, setResult] = React.useState<PersonalizedLearningContentOutput | null>(null);
+  const [result, setResult] = React.useState<any | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,7 +51,7 @@ export default function PersonalizePage() {
 
     const response = await generateContentAction(values);
 
-    if (response.success && response.data) {
+    if (response?.success && response.data) {
       setResult(response.data);
       toast({
         title: 'Conteúdo Gerado!',
@@ -63,7 +61,7 @@ export default function PersonalizePage() {
       toast({
         variant: 'destructive',
         title: 'Erro ao gerar conteúdo',
-        description: response.error || 'Ocorreu um erro inesperado. Tente novamente.',
+        description: response?.error || 'Ocorreu um erro inesperado. Tente novamente.',
       });
     }
 
@@ -80,6 +78,7 @@ export default function PersonalizePage() {
           Preencha os detalhes abaixo para criar uma atividade única para seu filho.
         </p>
       </div>
+
       <div className="grid gap-8 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -101,6 +100,7 @@ export default function PersonalizePage() {
                     </FormItem>
                   )}
                 />
+
                 <FormField
                   control={form.control}
                   name="progressLevel"
@@ -116,13 +116,14 @@ export default function PersonalizePage() {
                         <SelectContent>
                           <SelectItem value="beginner">Iniciante</SelectItem>
                           <SelectItem value="intermediate">Intermediário</SelectItem>
-                           <SelectItem value="advanced">Avançado</SelectItem>
+                          <SelectItem value="advanced">Avançado</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
+
                 <FormField
                   control={form.control}
                   name="activityType"
@@ -145,6 +146,7 @@ export default function PersonalizePage() {
                     </FormItem>
                   )}
                 />
+
                 <FormField
                   control={form.control}
                   name="uniqueNeeds"
@@ -164,6 +166,7 @@ export default function PersonalizePage() {
                     </FormItem>
                   )}
                 />
+
                 <FormField
                   control={form.control}
                   name="topic"
@@ -177,6 +180,7 @@ export default function PersonalizePage() {
                     </FormItem>
                   )}
                 />
+
                 <Button type="submit" disabled={loading} className="w-full">
                   {loading ? (
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
@@ -192,37 +196,44 @@ export default function PersonalizePage() {
 
         <div className="space-y-4">
           <h2 className="text-xl font-semibold font-headline">Atividade Gerada</h2>
-           {loading && (
+
+          {loading && (
             <Card className="flex items-center justify-center h-96">
-                <div className="text-center text-muted-foreground">
-                    <Loader2 className="mx-auto h-12 w-12 animate-spin text-primary"/>
-                    <p className="mt-4">Gerando atividade personalizada...</p>
-                </div>
+              <div className="text-center text-muted-foreground">
+                <Loader2 className="mx-auto h-12 w-12 animate-spin text-primary" />
+                <p className="mt-4">Gerando atividade personalizada...</p>
+              </div>
             </Card>
           )}
+
           {result && (
-            <Card className="bg-white dark:bg-card">
+            <Card>
               <CardHeader>
                 <CardTitle className="font-headline">{result.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                    <h3 className="font-semibold">Descrição e Objetivos:</h3>
-                    <p className="text-muted-foreground whitespace-pre-wrap">{result.description}</p>
+                  <h3 className="font-semibold">Descrição e Objetivos:</h3>
+                  <p className="text-muted-foreground whitespace-pre-wrap">
+                    {result.description}
+                  </p>
                 </div>
                 <div>
-                    <h3 className="font-semibold">Conteúdo da Atividade:</h3>
-                    <p className="text-muted-foreground whitespace-pre-wrap">{result.activityContent}</p>
+                  <h3 className="font-semibold">Conteúdo da Atividade:</h3>
+                  <p className="text-muted-foreground whitespace-pre-wrap">
+                    {result.activityContent}
+                  </p>
                 </div>
               </CardContent>
             </Card>
           )}
+
           {!loading && !result && (
-             <Card className="flex items-center justify-center h-96">
-                <div className="text-center text-muted-foreground">
-                    <Sparkles className="mx-auto h-12 w-12"/>
-                    <p className="mt-4">Sua atividade personalizada aparecerá aqui.</p>
-                </div>
+            <Card className="flex items-center justify-center h-96">
+              <div className="text-center text-muted-foreground">
+                <Sparkles className="mx-auto h-12 w-12" />
+                <p className="mt-4">Sua atividade personalizada aparecerá aqui.</p>
+              </div>
             </Card>
           )}
         </div>
