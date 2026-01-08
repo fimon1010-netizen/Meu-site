@@ -10,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,32 +24,26 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useToast } from '@/hooks/use-toast';
 
-/* =======================
-   SCHEMA (CLIENT SAFE)
-======================= */
+/* ✅ TUDO CLIENTE — SEM actions.ts */
+
 const formSchema = z.object({
-  childName: z.string().min(1, 'Informe o nome'),
+  childName: z.string().min(1),
   progressLevel: z.enum(['beginner', 'intermediate', 'advanced']),
   activityType: z.string(),
   uniqueNeeds: z.string().optional(),
   topic: z.string().optional(),
 });
 
-/* =======================
-   MOCK ACTION (SEM SERVER)
-======================= */
-async function generateContentAction(values: any) {
+async function generateContentAction() {
   return {
     success: true,
     data: {
-      title: `Atividade para ${values.childName}`,
-      description:
-        'Atividade gerada com sucesso. Esta é uma versão de demonstração.',
-      activityContent:
-        'Exercício simples baseado no nível e tipo selecionados.',
+      title: 'Atividade de Exemplo',
+      description: 'Conteúdo gerado com sucesso.',
+      activityContent: 'Aqui aparecerá a atividade personalizada.',
     },
   };
 }
@@ -65,92 +58,69 @@ export default function PersonalizePage() {
     defaultValues: {
       childName: '',
       progressLevel: 'beginner',
-      uniqueNeeds: '',
       activityType: 'sound association',
+      uniqueNeeds: '',
       topic: '',
     },
   });
 
-  async function onSubmit(values: any) {
+  async function onSubmit() {
     setLoading(true);
-    setResult(null);
-
-    const response = await generateContentAction(values);
-
-    if (response.success) {
-      setResult(response.data);
-      toast({
-        title: 'Conteúdo Gerado!',
-        description: 'Sua atividade personalizada está pronta.',
-      });
-    } else {
-      toast({
-        variant: 'destructive',
-        title: 'Erro',
-        description: 'Erro ao gerar conteúdo.',
-      });
-    }
-
+    const response = await generateContentAction();
+    setResult(response.data);
     setLoading(false);
+
+    toast({
+      title: 'Conteúdo Gerado!',
+      description: 'Sua atividade personalizada está pronta.',
+    });
   }
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold">Personalizar Atividade</h1>
-        <p className="text-muted-foreground">
-          Preencha os dados para gerar a atividade.
-        </p>
-      </div>
+      <h1 className="text-3xl font-bold">Personalizar Atividade</h1>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <Card>
+        <CardHeader>
+          <CardTitle>Gerador</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <FormField
+                control={form.control}
+                name="childName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nome</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <Button type="submit" className="w-full">
+                {loading ? <Loader2 className="animate-spin" /> : <Sparkles />}
+                Gerar
+              </Button>
+            </form>
+          </Form>
+        </CardContent>
+      </Card>
+
+      {result && (
         <Card>
           <CardHeader>
-            <CardTitle>Gerador</CardTitle>
+            <CardTitle>{result.title}</CardTitle>
           </CardHeader>
           <CardContent>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="childName"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Nome da Criança</FormLabel>
-                      <FormControl>
-                        <Input {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="progressLevel"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Nível</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="beginner">Iniciante</SelectItem>
-                          <SelectItem value="intermediate">Intermediário</SelectItem>
-                          <SelectItem value="advanced">Avançado</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </FormItem>
-                  )}
-                />
-
-                <Button type="submit" className="w-full" disabled={loading}>
-                  {loading ? (
-                    <Loader2 className="animate-spin mr-2 h-4 w-4" />
-                  ) : (
-                    <Sparkles className="mr-2 h-4 w-4" />
-                  )}
-                  Gerar
+            <p>{result.description}</p>
+            <p>{result.activityContent}</p>
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+}
